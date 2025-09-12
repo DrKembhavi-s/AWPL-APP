@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr Kembhavi's Astanga Wellness Pvt Ltd - Your Trusted Medical Partner</title>
+    <title>ARYA - Ayurveda, Yoga & Research Center, Hubli</title>
+    <meta name="description" content="ARYA - A Unit of Astanga Wellness Pvt Ltd. Multi-specialty Ayurveda, Panchakarma, Yoga, Diet and Lifestyle Regulation & Wellness Center in Hubli, Karnataka.">
     <style>
         /* ===================
            GLOBAL STYLES
@@ -31,7 +32,7 @@
            HEADER STYLES
         =================== */
         header {
-            background: linear-gradient(135deg, #2c5aa0 0%, #1e3d72 100%);
+            background: linear-gradient(135deg, #6a1b9a 0%, #4a148c 100%);
             color: white;
             padding: 1rem 0;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
@@ -44,15 +45,35 @@
             flex-wrap: wrap;
         }
 
-        .logo h1 {
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-img {
+            width: 60px;
+            height: 60px;
+            background: white;
+            border-radius: 8px;
+            padding: 5px;
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAiIGhlaWdodD0iNTAiIHZpZXdCb3g9IjAgMCA1MCA1MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMjUiIGN5PSIyNSIgcj0iMjAiIGZpbGw9IiM2YTFiOWEiLz4KPHN2ZyB4PSIxMCIgeT0iMTAiIHdpZHRoPSIzMCIgaGVpZ2h0PSIzMCIgdmlld0JveD0iMCAwIDMwIDMwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBkPSJNMTUgNUwxMi41IDEwSDcuNUwxMSAxM0w5LjUgMThMMTUgMTVMMjAuNSAxOEwxOSAxM0wyMi41IDEwSDE3LjVMMTUgNVoiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo8L3N2Zz4K');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .logo-text h1 {
             font-size: 1.8rem;
             font-weight: 700;
             margin-bottom: 0.2rem;
+            color: white;
         }
 
-        .logo p {
+        .logo-text p {
             font-size: 0.9rem;
             opacity: 0.9;
+            color: white;
         }
 
         /* ===================
@@ -100,11 +121,11 @@
         }
 
         .section-title {
-            color: #2c5aa0;
+            color: #6a1b9a;
             font-size: 2rem;
             margin-bottom: 1.5rem;
             text-align: center;
-            border-bottom: 3px solid #2c5aa0;
+            border-bottom: 3px solid #6a1b9a;
             padding-bottom: 0.5rem;
         }
 
@@ -112,8 +133,8 @@
            HERO SECTION
         =================== */
         .hero {
-            background: linear-gradient(rgba(44, 90, 160, 0.8), rgba(30, 61, 114, 0.8)), 
-                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23e3f2fd" width="1200" height="600"/><text x="600" y="300" font-family="Arial" font-size="24" fill="%23666" text-anchor="middle">Replace with clinic hero image</text></svg>');
+            background: linear-gradient(rgba(106, 27, 154, 0.8), rgba(74, 20, 140, 0.8)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23e1bee7" width="1200" height="600"/><circle cx="300" cy="150" r="50" fill="%239c27b0" opacity="0.3"/><circle cx="900" cy="450" r="80" fill="%236a1b9a" opacity="0.2"/><text x="600" y="300" font-family="Arial" font-size="24" fill="%23666" text-anchor="middle">ARYA Wellness Center</text></svg>');
             background-size: cover;
             background-position: center;
             color: white;
@@ -128,7 +149,7 @@
 
         .hero p {
             font-size: 1.2rem;
-            max-width: 600px;
+            max-width: 700px;
             margin: 0 auto;
         }
 
@@ -137,13 +158,13 @@
         =================== */
         .consultants-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 2rem;
             margin-top: 2rem;
         }
 
         .consultant-card {
-            background: #f8f9fa;
+            background: #f3e5f5;
             padding: 2rem;
             border-radius: 12px;
             text-align: center;
@@ -153,8 +174,8 @@
 
         .consultant-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(44, 90, 160, 0.2);
-            border-color: #2c5aa0;
+            box-shadow: 0 8px 25px rgba(106, 27, 154, 0.2);
+            border-color: #6a1b9a;
         }
 
         .consultant-photo {
@@ -162,30 +183,44 @@
             height: 150px;
             border-radius: 50%;
             margin: 0 auto 1rem;
-            background: linear-gradient(45deg, #e3f2fd, #bbdefb);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border: 3px solid #6a1b9a;
+            overflow: hidden;
+            background-color: #e1bee7;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 0.9rem;
             color: #666;
+            font-size: 0.9rem;
             text-align: center;
         }
 
         .consultant-name {
-            color: #2c5aa0;
+            color: #6a1b9a;
             font-size: 1.4rem;
             margin-bottom: 0.5rem;
+            font-weight: bold;
         }
 
         .consultant-specialty {
-            color: #666;
+            color: #4a148c;
             font-weight: 500;
             margin-bottom: 1rem;
         }
 
         .consultant-credentials {
             font-size: 0.9rem;
-            color: #888;
+            color: #666;
+            line-height: 1.4;
+        }
+
+        .consultant-phone {
+            color: #6a1b9a;
+            font-weight: bold;
+            margin-top: 0.5rem;
+            font-size: 1.1rem;
         }
 
         /* ===================
@@ -193,26 +228,61 @@
         =================== */
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 1.5rem;
             margin-top: 2rem;
         }
 
-        .service-item {
-            background: #f8f9fa;
+        .service-category {
+            background: #f3e5f5;
             padding: 1.5rem;
+            border-radius: 12px;
+            border-left: 4px solid #6a1b9a;
+        }
+
+        .service-category h4 {
+            color: #6a1b9a;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .service-item {
+            background: white;
+            margin: 0.5rem 0;
+            padding: 1rem;
             border-radius: 8px;
-            border-left: 4px solid #2c5aa0;
-            transition: background-color 0.3s ease;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid #e0e0e0;
         }
 
-        .service-item:hover {
-            background-color: #e3f2fd;
+        .service-name {
+            font-weight: 500;
+            color: #333;
+            flex: 1;
         }
 
-        .service-item h4 {
-            color: #2c5aa0;
-            margin-bottom: 0.5rem;
+        .service-price {
+            color: #6a1b9a;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .conditions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .condition-item {
+            background: #f3e5f5;
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 4px solid #6a1b9a;
+            font-weight: 500;
+            color: #4a148c;
         }
 
         /* ===================
@@ -230,8 +300,8 @@
         }
 
         .tab-button {
-            background: #e3f2fd;
-            color: #2c5aa0;
+            background: #e1bee7;
+            color: #6a1b9a;
             border: none;
             padding: 0.8rem 1.5rem;
             border-radius: 25px;
@@ -241,13 +311,13 @@
         }
 
         .tab-button.active {
-            background: #2c5aa0;
+            background: #6a1b9a;
             color: white;
         }
 
         .tab-content {
             display: none;
-            background: #f8f9fa;
+            background: #f3e5f5;
             padding: 2rem;
             border-radius: 8px;
         }
@@ -257,7 +327,7 @@
         }
 
         .tab-content h4 {
-            color: #2c5aa0;
+            color: #6a1b9a;
             margin-bottom: 1rem;
         }
 
@@ -297,19 +367,18 @@
             margin-bottom: 1rem;
         }
 
-        .qr-placeholder {
-            width: 200px;
-            height: 200px;
+        .qr-code-container {
+            width: 250px;
+            height: 350px;
             margin: 1rem auto;
-            background: #f5f5f5;
-            border: 2px dashed #ccc;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: #666;
-            font-size: 0.9rem;
-            border-radius: 8px;
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 10px;
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjMwIiBoZWlnaHQ9IjMzMCIgdmlld0JveD0iMCAwIDIzMCAzMzAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyMzAiIGhlaWdodD0iMzMwIiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMjAgNDBINjBWODBIMjBWNDBaTTcwIDQwSDExMFY4MEg3MFY0MFpNMTIwIDQwSDE2MFY4MEgxMjBWNDBaTTE3MCA0MEgyMTBWODBIMTcwVjQwWk0yMCA5MEg2MFYxMzBIMjBWOTBaTTEyMCA5MEgxNjBWMTMwSDEyMFY5MFpNMjAgMTQwSDYwVjE4MEgyMFYxNDBaTTcwIDE0MEgxMTBWMTgwSDcwVjE0MFpNMTcwIDE0MEgyMTBWMTgwSDE3MFYxNDBaTTIwIDE5MEg2MFYyMzBIMjBWMTkwWk0xMjAgMTkwSDE2MFYyMzBIMTIwVjE5MFpNMjAgMjQwSDYwVjI4MEgyMFYyNDBaTTcwIDI0MEgxMTBWMjgwSDcwVjI0MFpNMTcwIDI0MEgyMTBWMjgwSDE3MFYyNDBaIiBmaWxsPSJibGFjayIvPgo8dGV4dCB4PSIxMTUiIHk9IjMwIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiM0Mjg1RjQiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkdvb2dsZSBQYXk8L3RleHQ+Cjx0ZXh0IHg9IjExNSIgeT0iMzEwIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IiM2NjYiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkFzdGFuZ2EgV2VsbG5lc3MgUHZ0IEx0ZDwvdGV4dD4KPHRleHQgeD0iMTE1IiB5PSIzMjUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxMCIgZmlsbD0iIzY2NiIgdGV4dC1hbmNob3I9Im1pZGRsZSI+UmVwbGFjZSB3aXRoIGFjdHVhbCBRUiBjb2RlPC90ZXh0Pgo8L3N2Zz4K');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
         }
 
         .upi-section {
@@ -323,7 +392,7 @@
             margin: 1rem 0;
             font-family: monospace;
             font-weight: bold;
-            color: #2c5aa0;
+            color: #6a1b9a;
             word-break: break-all;
         }
 
@@ -335,7 +404,7 @@
         }
 
         .btn {
-            background: #2c5aa0;
+            background: #6a1b9a;
             color: white;
             border: none;
             padding: 1rem 2rem;
@@ -350,7 +419,7 @@
         }
 
         .btn:hover {
-            background: #1e3d72;
+            background: #4a148c;
         }
 
         .btn-success {
@@ -373,7 +442,7 @@
            FOOTER STYLES
         =================== */
         footer {
-            background: #2c5aa0;
+            background: #6a1b9a;
             color: white;
             text-align: center;
             padding: 2rem 0;
@@ -456,6 +525,10 @@
                 grid-template-columns: 1fr;
                 text-align: center;
             }
+
+            .conditions-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         /* ===================
@@ -477,6 +550,15 @@
             display: none;
         }
 
+        .discount-badge {
+            background: #4caf50;
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
         /* ===================
            ANIMATIONS
         =================== */
@@ -496,8 +578,11 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <h1>Dr Kembhavi's Astanga Wellness Pvt Ltd</h1>
-                    <p>Holistic Healthcare & Traditional Wellness</p>
+                    <div class="logo-img"></div>
+                    <div class="logo-text">
+                        <h1>ARYA</h1>
+                        <p>Ayurveda • Yoga • Research Center</p>
+                    </div>
                 </div>
                 <nav>
                     <button class="mobile-menu" onclick="toggleMenu()">☰</button>
@@ -518,8 +603,9 @@
         <!-- HERO SECTION -->
         <section id="home" class="hero">
             <div class="container">
-                <h2>Welcome to Dr Kembhavi's Astanga Wellness</h2>
-                <p>Experience comprehensive healthcare combining modern medical expertise with traditional Astanga wellness practices for your complete well-being.</p>
+                <h2>Welcome to ARYA</h2>
+                <p>Ayurveda, Yoga & Research Center - A Unit of Astanga Wellness Pvt Ltd<br>
+                Multi-specialty Ayurveda, Panchakarma, Yoga, Diet and Lifestyle Regulation & Wellness Center</p>
             </div>
         </section>
 
@@ -528,90 +614,166 @@
             <section id="consultants" class="section">
                 <h3 class="section-title">Our Expert Consultants</h3>
                 <div class="consultants-grid">
-                    <!-- CONSULTANT 1 - Replace with actual doctor details -->
+                    <!-- CONSULTANT 1 - Dr. Aakash S. Kembhavi -->
                     <div class="consultant-card">
                         <div class="consultant-photo">
-                            Replace with Dr. Kembhavi's photo
+                            Replace with Dr. Aakash's photo
                         </div>
-                        <h4 class="consultant-name">Dr. Kembhavi</h4>
-                        <p class="consultant-specialty">Chief Medical Officer & Astanga Wellness Specialist</p>
-                        <p class="consultant-credentials">MBBS, MD, Certified Astanga Practitioner<br>25+ years experience</p>
+                        <h4 class="consultant-name">Dr. Aakash S. Kembhavi</h4>
+                        <p class="consultant-specialty">Consulting Ayurveda Surgeon and Counselor</p>
+                        <p class="consultant-credentials">
+                            M.D. (Ayu-Shalya), PGDMLS,<br>
+                            M.S. (Counseling & Psychotherapy)<br>
+                            25+ years experience
+                        </p>
+                        <p class="consultant-phone">📞 98867 59499</p>
                     </div>
 
-                    <!-- CONSULTANT 2 - Add more consultants as needed -->
+                    <!-- CONSULTANT 2 - Dr. Anita Kadagad Kembhavi -->
                     <div class="consultant-card">
                         <div class="consultant-photo">
-                            Replace with consultant photo
+                            Replace with Dr. Anita's photo
                         </div>
-                        <h4 class="consultant-name">Dr. [Name]</h4>
-                        <p class="consultant-specialty">Ayurvedic Medicine Specialist</p>
-                        <p class="consultant-credentials">BAMS, MD (Ayurveda)<br>15+ years experience</p>
-                    </div>
-
-                    <!-- CONSULTANT 3 - Add more consultants as needed -->
-                    <div class="consultant-card">
-                        <div class="consultant-photo">
-                            Replace with consultant photo
-                        </div>
-                        <h4 class="consultant-name">Dr. [Name]</h4>
-                        <p class="consultant-specialty">Yoga Therapy & Wellness Coach</p>
-                        <p class="consultant-credentials">Certified Yoga Therapist<br>10+ years experience</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- =================== CREDENTIALS SECTION =================== -->
-            <section class="section">
-                <h3 class="section-title">Our Credentials & Certifications</h3>
-                <div class="services-grid">
-                    <div class="service-item">
-                        <h4>Medical Certifications</h4>
-                        <p>All our doctors are licensed medical practitioners with valid state medical council registrations and specialized training in their respective fields.</p>
-                    </div>
-                    <div class="service-item">
-                        <h4>Astanga Wellness Certification</h4>
-                        <p>Certified practitioners of traditional Astanga wellness methods, combining ancient wisdom with modern healthcare approaches.</p>
-                    </div>
-                    <div class="service-item">
-                        <h4>Continuing Education</h4>
-                        <p>Our team regularly attends medical conferences and wellness seminars to stay updated with the latest advancements in healthcare.</p>
-                    </div>
-                    <div class="service-item">
-                        <h4>Quality Assurance</h4>
-                        <p>We maintain high standards of patient care and follow all medical ethics and safety protocols as per medical council guidelines.</p>
+                        <h4 class="consultant-name">Dr. Anita Kadagad Kembhavi</h4>
+                        <p class="consultant-specialty">Consulting Ayurveda, Yoga, Naturopathy, Acupuncture Physician, Panchakarma Specialist and Counselor</p>
+                        <p class="consultant-credentials">
+                            M.D. (Ayu-Kaya Chikitsa), D.Y.S., D.Nat-Yoga (Ayu),<br>
+                            D.Ac., M.A. (Psychology in Child Mental Health),<br>
+                            YIC, MSc Yoga<br>
+                            20+ years experience
+                        </p>
+                        <p class="consultant-phone">📞 98867 59399</p>
                     </div>
                 </div>
             </section>
 
             <!-- =================== SERVICES SECTION =================== -->
             <section id="services" class="section">
-                <h3 class="section-title">Our Services</h3>
+                <h3 class="section-title">Our Services & Pricing</h3>
+                
+                <!-- Basic Services -->
                 <div class="services-grid">
-                    <!-- Modify these services according to your actual offerings -->
-                    <div class="service-item">
-                        <h4>General Medicine Consultation</h4>
-                        <p>Comprehensive health check-ups and treatment for common medical conditions with personalized care.</p>
+                    <div class="service-category">
+                        <h4>📋 Consultation Services</h4>
+                        <div class="service-item">
+                            <span class="service-name">One Time Registration Fee</span>
+                            <span class="service-price">₹100.00</span>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-name">Consultation</span>
+                            <span class="service-price">₹300.00</span>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-name">Follow-up Consultation (within 30 days)</span>
+                            <span class="service-price">₹150.00</span>
+                        </div>
                     </div>
-                    <div class="service-item">
-                        <h4>Astanga Wellness Programs</h4>
-                        <p>Traditional Astanga-based wellness programs including yoga therapy, meditation, and lifestyle counseling.</p>
+
+                    <div class="service-category">
+                        <h4>🌿 Panchakarma Treatments (Including Medicine)</h4>
+                        <div class="service-item">
+                            <span class="service-name">Vamana Karma</span>
+                            <span class="service-price">₹10,000.00</span>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-name">Virechana Karma</span>
+                            <span class="service-price">₹8,500.00</span>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-name">Basti Karma</span>
+                            <span class="service-price">₹8,000.00</span>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-name">Nasya Karma</span>
+                            <span class="service-price">₹2,500.00</span>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-name">Rakta Mokshana (per sitting)</span>
+                            <span class="service-price">₹750.00</span>
+                        </div>
                     </div>
-                    <div class="service-item">
-                        <h4>Preventive Healthcare</h4>
-                        <p>Health screening, vaccination, and preventive care programs to maintain optimal health.</p>
+
+                    <div class="service-category">
+                        <h4>🏥 Other Treatments (Exclusive of Medicine Cost)</h4>
+                        <div class="service-item">
+                            <span class="service-name">Sarvanga Abhyanga & Swedana / Day</span>
+                            <span class="service-price">₹750.00</span>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-name">Sthanika Abhyanga & Nadi Sweda / Day</span>
+                            <span class="service-price">₹500.00</span>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-name">Matra Basti / Day</span>
+                            <span class="service-price">₹300.00</span>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-name">Kati Basti / Day</span>
+                            <span class="service-price">₹500.00</span>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-name">Janu Basti / Day</span>
+                            <span class="service-price">₹500.00</span>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-name">Shirodhara / Day</span>
+                            <span class="service-price">₹750.00</span>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-name">Pinda Sweda / Day</span>
+                            <span class="service-price">₹500.00</span>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-name">Shasthika Shali Pinda Sweda / Day</span>
+                            <span class="service-price">₹750.00</span>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-name">Parisheka / Day</span>
+                            <span class="service-price">₹400.00</span>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-name">Netra Tarpana / Day</span>
+                            <span class="service-price">₹250.00</span>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-name">Agni Karma / Day</span>
+                            <span class="service-price">₹400.00</span>
+                        </div>
                     </div>
-                    <div class="service-item">
-                        <h4>Ayurvedic Treatments</h4>
-                        <p>Traditional Ayurvedic therapies and herbal treatments for various health conditions.</p>
+
+                    <div class="service-category">
+                        <h4>🎯 Special Offers</h4>
+                        <div class="service-item">
+                            <span class="service-name">Senior Citizens</span>
+                            <span class="service-price discount-badge">20% Discount</span>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-name">Ex-Service / Defence Personnel</span>
+                            <span class="service-price discount-badge">20% Discount</span>
+                        </div>
+                        <div class="service-item">
+                            <span class="service-name">BPL Card Holders</span>
+                            <span class="service-price discount-badge">15% Discount</span>
+                        </div>
                     </div>
-                    <div class="service-item">
-                        <h4>Nutritional Counseling</h4>
-                        <p>Personalized diet plans and nutritional guidance based on individual health needs and constitution.</p>
-                    </div>
-                    <div class="service-item">
-                        <h4>Stress Management</h4>
-                        <p>Holistic stress management techniques combining modern psychology with traditional wellness practices.</p>
-                    </div>
+                </div>
+
+                <!-- Conditions We Treat -->
+                <h4 style="color: #6a1b9a; margin-top: 3rem; margin-bottom: 1rem; text-align: center; font-size: 1.5rem;">Conditions We Treat</h4>
+                <div class="conditions-grid">
+                    <div class="condition-item">🔸 Piles, Fissure and Fistula</div>
+                    <div class="condition-item">🔸 Obesity, Diabetes, High BP, Thyroid</div>
+                    <div class="condition-item">🔸 Sleep Disorders</div>
+                    <div class="condition-item">🔸 Osteoarthritis, Osteoporosis, Rheumatoid Arthritis</div>
+                    <div class="condition-item">🔸 Paralysis, Disc, Spondylosis, Parkinsons and Other Neurology Problems</div>
+                    <div class="condition-item">🔸 PCOS, Menstrual Problems and Infertility</div>
+                    <div class="condition-item">🔸 Skin, Hair and Cosmetic Problems</div>
+                    <div class="condition-item">🔸 Stones, Prostate and Kidney Disease</div>
+                    <div class="condition-item">🔸 Gout, Varicose Veins, Diabetic Foot, Ulcers etc</div>
+                    <div class="condition-item">🔸 Acidity, Ulcers, Jaundice, Colitis, IBS etc</div>
+                    <div class="condition-item">🔸 Asthma and Allergy</div>
+                    <div class="condition-item">🔸 All types of Cancer</div>
+                    <div class="condition-item">🔸 Alcohol De-Addiction</div>
                 </div>
             </section>
 
@@ -622,63 +784,83 @@
                     <div class="tab-buttons">
                         <button class="tab-button active" onclick="showTab('diet')">Diet Guidelines</button>
                         <button class="tab-button" onclick="showTab('lifestyle')">Lifestyle Tips</button>
-                        <button class="tab-button" onclick="showTab('wellness')">Wellness Practices</button>
+                        <button class="tab-button" onclick="showTab('ayurveda')">Ayurvedic Principles</button>
+                        <button class="tab-button" onclick="showTab('yoga')">Yoga & Wellness</button>
                         <button class="tab-button" onclick="showTab('prevention')">Prevention Tips</button>
                     </div>
 
                     <div id="diet" class="tab-content active">
-                        <h4>Healthy Diet Guidelines</h4>
+                        <h4>Ayurvedic Diet Guidelines</h4>
                         <ul>
-                            <li>Eat fresh, seasonal, and locally sourced foods whenever possible</li>
-                            <li>Include a variety of colorful fruits and vegetables in your daily meals</li>
-                            <li>Choose whole grains over processed foods</li>
-                            <li>Limit sugar, salt, and processed food intake</li>
-                            <li>Stay hydrated with adequate water intake (8-10 glasses daily)</li>
-                            <li>Practice mindful eating and avoid overeating</li>
-                            <li>Include healthy fats like nuts, seeds, and olive oil</li>
-                            <li>Maintain regular meal timings</li>
+                            <li>Eat fresh, seasonal, and locally sourced foods according to your dosha</li>
+                            <li>Include six tastes (sweet, sour, salty, pungent, bitter, astringent) in your meals</li>
+                            <li>Choose whole grains, fresh vegetables, and fruits appropriate for your constitution</li>
+                            <li>Avoid processed foods, excessive sugar, and foods that aggravate your dosha</li>
+                            <li>Drink warm water throughout the day, especially upon waking</li>
+                            <li>Practice mindful eating in a calm environment</li>
+                            <li>Include digestive spices like ginger, cumin, coriander, and turmeric</li>
+                            <li>Maintain regular meal timings and avoid overeating</li>
+                            <li>Consider your digestive fire (Agni) when choosing foods</li>
                         </ul>
                     </div>
 
                     <div id="lifestyle" class="tab-content">
-                        <h4>Healthy Lifestyle Recommendations</h4>
+                        <h4>Ayurvedic Lifestyle Recommendations</h4>
                         <ul>
-                            <li>Maintain a regular sleep schedule (7-8 hours per night)</li>
-                            <li>Exercise regularly for at least 30 minutes daily</li>
-                            <li>Practice stress management techniques like meditation or yoga</li>
-                            <li>Avoid smoking and limit alcohol consumption</li>
-                            <li>Take regular breaks from screens and electronic devices</li>
+                            <li>Follow a daily routine (Dinacharya) aligned with natural cycles</li>
+                            <li>Wake up early, preferably before sunrise</li>
+                            <li>Practice oil pulling and tongue scraping for oral health</li>
+                            <li>Take regular oil massages (Abhyanga) for body nourishment</li>
+                            <li>Avoid suppressing natural urges (Vegas)</li>
+                            <li>Balance work, rest, and recreational activities</li>
                             <li>Spend time in nature and get adequate sunlight</li>
-                            <li>Maintain social connections and relationships</li>
-                            <li>Practice good hygiene and cleanliness</li>
+                            <li>Maintain emotional balance through meditation and counseling</li>
+                            <li>Follow seasonal regimens (Ritucharya) for optimal health</li>
                         </ul>
                     </div>
 
-                    <div id="wellness" class="tab-content">
-                        <h4>Astanga Wellness Practices</h4>
+                    <div id="ayurveda" class="tab-content">
+                        <h4>Core Ayurvedic Principles</h4>
                         <ul>
-                            <li>Start your day with gentle stretching or yoga poses</li>
-                            <li>Practice deep breathing exercises (Pranayama) daily</li>
-                            <li>Incorporate meditation into your routine</li>
-                            <li>Follow the principles of Ahimsa (non-violence) in thought and action</li>
-                            <li>Practice gratitude and positive thinking</li>
-                            <li>Maintain balance in all aspects of life</li>
-                            <li>Listen to your body's natural rhythms</li>
-                            <li>Seek harmony between mind, body, and spirit</li>
+                            <li>Understand your unique constitution (Prakriti) and current state (Vikriti)</li>
+                            <li>Balance the three doshas: Vata, Pitta, and Kapha</li>
+                            <li>Strengthen your digestive fire (Agni) for proper metabolism</li>
+                            <li>Support natural detoxification through proper elimination</li>
+                            <li>Use herbs and treatments specific to your individual needs</li>
+                            <li>Practice Panchakarma for deep cleansing and rejuvenation</li>
+                            <li>Maintain mental clarity through Satvavajaya (psychotherapy)</li>
+                            <li>Follow ethical conduct (Achar Rasayana) for holistic wellness</li>
+                            <li>Seek balance in all aspects of life - physical, mental, and spiritual</li>
+                        </ul>
+                    </div>
+
+                    <div id="yoga" class="tab-content">
+                        <h4>Yoga & Wellness Practices</h4>
+                        <ul>
+                            <li>Practice daily yoga asanas appropriate for your body type</li>
+                            <li>Include pranayama (breathing exercises) in your routine</li>
+                            <li>Start with simple poses and gradually advance</li>
+                            <li>Practice meditation for mental clarity and peace</li>
+                            <li>Use yoga therapy for specific health conditions</li>
+                            <li>Combine physical poses with mindful breathing</li>
+                            <li>Practice yoga nidra for deep relaxation</li>
+                            <li>Include dharana (concentration) and dhyana (meditation)</li>
+                            <li>Follow the eight limbs of yoga for complete wellness</li>
                         </ul>
                     </div>
 
                     <div id="prevention" class="tab-content">
-                        <h4>Disease Prevention Tips</h4>
+                        <h4>Disease Prevention & Health Maintenance</h4>
                         <ul>
-                            <li>Get regular health check-ups and screenings</li>
-                            <li>Keep vaccinations up to date</li>
-                            <li>Practice good hand hygiene</li>
-                            <li>Maintain a healthy weight</li>
-                            <li>Monitor blood pressure and cholesterol levels</li>
-                            <li>Protect yourself from excessive sun exposure</li>
-                            <li>Stay informed about seasonal health concerns</li>
-                            <li>Seek early medical attention for persistent symptoms</li>
+                            <li>Get regular Ayurvedic consultations and pulse diagnosis</li>
+                            <li>Follow preventive Panchakarma treatments seasonally</li>
+                            <li>Maintain proper hygiene and cleanliness</li>
+                            <li>Build immunity through Rasayana (rejuvenative) therapies</li>
+                            <li>Address imbalances early before they manifest as disease</li>
+                            <li>Practice stress management through yoga and meditation</li>
+                            <li>Maintain healthy relationships and social connections</li>
+                            <li>Stay informed about Ayurvedic principles and self-care</li>
+                            <li>Seek guidance for constitutional analysis and personalized care</li>
                         </ul>
                     </div>
                 </div>
@@ -688,14 +870,14 @@
             <section id="payment" class="section payment-section">
                 <h3 class="section-title">Easy Payment Options</h3>
                 <div class="payment-methods">
-                    <!-- GOOGLE BUSINESS QR CODE -->
+                    <!-- GOOGLE PAY QR CODE -->
                     <div class="payment-method">
-                        <h4>📱 Google Business QR Code</h4>
-                        <div class="qr-placeholder">
-                            <!-- REPLACE THIS WITH YOUR ACTUAL GOOGLE BUSINESS QR CODE -->
-                            Replace this placeholder with your actual Google Business QR code image
-                        </div>
-                        <p>Scan the QR code with any UPI app to make payments directly to our business account.</p>
+                        <h4>📱 Google Pay QR Code</h4>
+                        <div class="qr-code-container"></div>
+                        <p><strong>Astanga Wellness Pvt Ltd</strong><br>
+                        Phone: +91 98867 59499<br>
+                        UPI ID: 9886759499@okbizaxis</p>
+                        <p style="margin-top: 1rem; color: #666;">Scan the QR code with any UPI app to make payments directly to our business account.</p>
                     </div>
 
                     <!-- UPI PAYMENT -->
@@ -703,8 +885,7 @@
                         <h4>💳 UPI Payment</h4>
                         <div class="upi-section">
                             <p>Our UPI ID:</p>
-                            <!-- REPLACE WITH YOUR ACTUAL UPI ID -->
-                            <div class="upi-id" id="upi-id">drkemasthanga@paytm</div>
+                            <div class="upi-id" id="upi-id">9886759499@okbizaxis</div>
                             <div class="payment-buttons">
                                 <button class="btn btn-success" onclick="copyUPIId()">📋 Copy UPI ID</button>
                                 <a href="#" class="btn" onclick="openUPIApp()" id="upi-link">💰 Pay Now via UPI</a>
@@ -738,25 +919,30 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h4>Contact Information</h4>
-                    <!-- UPDATE WITH YOUR ACTUAL CONTACT DETAILS -->
-                    <p>📍 [Your Clinic Address]</p>
-                    <p>📞 [Your Phone Number]</p>
-                    <p>📧 [Your Email Address]</p>
+                    <p>📍 ARYA - A Unit of Astanga Wellness Pvt Ltd</p>
+                    <p>Shop No 1 F-C, Om Annexe</p>
+                    <p>Shirur Park Main Road, Prashant Colony</p>
+                    <p>Vidyanagar, Hubli - 580031, Karnataka, India</p>
+                    <p>📞 Dr. Aakash: 98867 59499</p>
+                    <p>📞 Dr. Anita: 98867 59399</p>
+                    <p>📧 drkembhavi@live.com</p>
                 </div>
                 <div class="footer-section">
                     <h4>Working Hours</h4>
-                    <!-- UPDATE WITH YOUR ACTUAL WORKING HOURS -->
-                    <p>Monday - Saturday: 9:00 AM - 6:00 PM</p>
-                    <p>Sunday: 10:00 AM - 2:00 PM</p>
-                    <p>Emergency: 24/7 (Call ahead)</p>
+                    <p>Monday - Saturday: 9:00 AM - 1:00 PM</p>
+                    <p>                   4:00 PM - 8:00 PM</p>
+                    <p>Sunday: 9:00 AM - 1:00 PM</p>
+                    <p>Consultation by appointment preferred</p>
+                    <p>Emergency: Call before visiting</p>
                 </div>
                 <div class="footer-section">
-                    <h4>About Us</h4>
-                    <p>Dr Kembhavi's Astanga Wellness Pvt Ltd combines modern medical expertise with traditional Astanga wellness practices to provide comprehensive healthcare solutions.</p>
+                    <h4>About ARYA</h4>
+                    <p>ARYA is a multi-specialty Ayurveda, Panchakarma, Yoga, Diet and Lifestyle Regulation & Wellness Center. We combine traditional Ayurvedic wisdom with modern medical approaches for comprehensive healthcare.</p>
+                    <p style="margin-top: 1rem; font-weight: bold;">SWARNA PRASHANA Available</p>
                 </div>
             </div>
             <div style="border-top: 1px solid rgba(255,255,255,0.2); padding-top: 1rem;">
-                <p>&copy; 2025 Dr Kembhavi's Astanga Wellness Pvt Ltd. All rights reserved.</p>
+                <p>&copy; 2025 ARYA - Ayurveda, Yoga & Research Center, Hubli. A Unit of Astanga Wellness Pvt Ltd. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -788,9 +974,8 @@
 
         // =================== PAYMENT FUNCTIONS ===================
         
-        // REPLACE 'drkemasthanga@paytm' WITH YOUR ACTUAL UPI ID
-        const UPI_ID = 'drkemasthanga@paytm';
-        const BUSINESS_NAME = 'Dr Kembhavi\'s Astanga Wellness Pvt Ltd';
+        const UPI_ID = '9886759499@okbizaxis';
+        const BUSINESS_NAME = 'Astanga Wellness Pvt Ltd';
 
         function copyUPIId() {
             const upiId = document.getElementById('upi-id').textContent;
@@ -809,17 +994,13 @@
         }
 
         function openUPIApp() {
-            // This creates a UPI deep link that opens UPI apps
-            // MODIFY THE AMOUNT AND DESCRIPTION AS NEEDED
-            const amount = ''; // Leave empty so user can enter amount
-            const description = 'Payment to Dr Kembhavi\'s Astanga Wellness';
+            const amount = '';
+            const description = 'Payment to ARYA - Astanga Wellness';
             
             const upiUrl = `upi://pay?pa=${UPI_ID}&pn=${encodeURIComponent(BUSINESS_NAME)}&tn=${encodeURIComponent(description)}${amount ? '&am=' + amount : ''}`;
             
-            // Try to open UPI app
             window.location.href = upiUrl;
             
-            // Fallback message
             setTimeout(() => {
                 alert('If UPI app didn\'t open, please copy the UPI ID and paste it in your preferred UPI app.');
             }, 2000);
@@ -827,27 +1008,30 @@
 
         function shareUPIDetails() {
             const paymentDetails = `
-Payment Details for Dr Kembhavi's Astanga Wellness Pvt Ltd
+Payment Details for ARYA - Ayurveda, Yoga & Research Center
 
 UPI ID: ${UPI_ID}
 Business Name: ${BUSINESS_NAME}
+Phone: +91 98867 59499
 
 Instructions:
 1. Open any UPI app (PhonePe, Paytm, Google Pay, etc.)
 2. Choose "Pay to UPI ID" or "Pay to Phone Number"
 3. Enter the UPI ID: ${UPI_ID}
-4. Enter the amount as advised
+4. Enter the amount as advised by our consultant
 5. Complete the payment
 6. Share payment confirmation with the clinic
+
+Address: Shop No 1 F-C, Om Annexe, Shirur Park Main Road
+Prashant Colony, Vidyanagar, Hubli - 580031, Karnataka
             `.trim();
 
             if (navigator.share) {
                 navigator.share({
-                    title: 'Payment Details - Dr Kembhavi\'s Astanga Wellness',
+                    title: 'Payment Details - ARYA Wellness Center',
                     text: paymentDetails
                 });
             } else {
-                // Fallback: copy to clipboard
                 navigator.clipboard.writeText(paymentDetails).then(() => {
                     alert('Payment details copied to clipboard! You can share this information.');
                 }).catch(() => {
@@ -867,61 +1051,17 @@ Instructions:
                         block: 'start'
                     });
                 }
-                // Close mobile menu if open
                 document.getElementById('nav-menu').classList.remove('show');
             });
         });
 
         // =================== INITIALIZATION ===================
         document.addEventListener('DOMContentLoaded', function() {
-            console.log('Dr Kembhavi\'s Astanga Wellness app loaded successfully!');
+            console.log('ARYA - Ayurveda, Yoga & Research Center app loaded successfully!');
             
-            // Update UPI link with actual UPI ID
             const upiLink = document.getElementById('upi-link');
             upiLink.onclick = openUPIApp;
         });
-
-        /* 
-        =================== CUSTOMIZATION NOTES ===================
-        
-        TO CUSTOMIZE THIS APP FOR YOUR CLINIC:
-
-        1. REPLACE PLACEHOLDER IMAGES:
-           - Add your clinic hero image
-           - Add doctor photos in consultant cards
-           - Add your Google Business QR code image
-
-        2. UPDATE CONTACT INFORMATION:
-           - Replace [Your Clinic Address] with actual address
-           - Replace [Your Phone Number] with actual phone
-           - Replace [Your Email Address] with actual email
-
-        3. UPDATE PAYMENT DETAILS:
-           - Replace 'drkemasthanga@paytm' with your actual UPI ID
-           - Update Google Business QR code
-
-        4. MODIFY SERVICES:
-           - Update the services grid with your actual services
-           - Modify pricing if needed
-
-        5. UPDATE CONSULTANT DETAILS:
-           - Replace placeholder consultant information
-           - Add/remove consultant cards as needed
-
-        6. CUSTOMIZE CONTENT:
-           - Update working hours
-           - Modify health guidelines as per your practice
-           - Update about us section
-
-        7. BRANDING:
-           - Adjust colors in CSS if needed
-           - Add your logo if available
-
-        8. FUNCTIONALITY:
-           - Test all payment links
-           - Verify UPI ID functionality
-           - Test on mobile devices
-        */
     </script>
 </body>
 </html>
