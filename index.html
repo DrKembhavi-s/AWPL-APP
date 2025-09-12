@@ -3,1067 +3,533 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ARYA - Ayurveda, Yoga & Research Center, Hubli</title>
-    <meta name="description" content="ARYA - A Unit of Astanga Wellness Pvt Ltd. Multi-specialty Ayurveda, Panchakarma, Yoga, Diet and Lifestyle Regulation & Wellness Center in Hubli, Karnataka.">
+    <title>Arya Ayurveda, Yoga & Research Center</title>
     <style>
-        /* ===================
-           GLOBAL STYLES
-        =================== */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
+        
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
-            background-color: #f8f9fa;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
         }
-
+        
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 20px;
         }
-
-        /* ===================
-           HEADER STYLES
-        =================== */
-        header {
-            background: linear-gradient(135deg, #6a1b9a 0%, #4a148c 100%);
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 1rem 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-align: center;
+            padding: 40px 20px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
-
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .logo-img {
-            width: 60px;
-            height: 60px;
-            background: white;
-            border-radius: 8px;
-            padding: 5px;
-            background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAiIGhlaWdodD0iNTAiIHZpZXdCb3g9IjAgMCA1MCA1MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMjUiIGN5PSIyNSIgcj0iMjAiIGZpbGw9IiM2YTFiOWEiLz4KPHN2ZyB4PSIxMCIgeT0iMTAiIHdpZHRoPSIzMCIgaGVpZ2h0PSIzMCIgdmlld0JveD0iMCAwIDMwIDMwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBkPSJNMTUgNUwxMi41IDEwSDcuNUwxMSAxM0w5LjUgMThMMTUgMTVMMjAuNSAxOEwxOSAxM0wyMi41IDEwSDE3LjVMMTUgNVoiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo8L3N2Zz4K');
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-
-        .logo-text h1 {
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin-bottom: 0.2rem;
-            color: white;
-        }
-
-        .logo-text p {
-            font-size: 0.9rem;
+        
+        .header p {
+            font-size: 1.2em;
             opacity: 0.9;
-            color: white;
         }
-
-        /* ===================
-           NAVIGATION STYLES
-        =================== */
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 2rem;
+        
+        .contact-info {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
         }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            transition: opacity 0.3s ease;
+        
+        .contact-info h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.3em;
         }
-
-        nav a:hover {
-            opacity: 0.8;
+        
+        .address {
+            color: #666;
+            margin-bottom: 10px;
         }
-
-        .mobile-menu {
-            display: none;
-            background: none;
-            border: none;
-            color: white;
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-
-        /* ===================
-           MAIN CONTENT STYLES
-        =================== */
-        main {
-            padding: 2rem 0;
-        }
-
+        
         .section {
             background: white;
-            margin: 2rem 0;
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
         }
-
-        .section-title {
-            color: #6a1b9a;
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-            text-align: center;
-            border-bottom: 3px solid #6a1b9a;
-            padding-bottom: 0.5rem;
+        
+        .section h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #f0f2f5;
+            font-size: 1.8em;
         }
-
-        /* ===================
-           HERO SECTION
-        =================== */
-        .hero {
-            background: linear-gradient(rgba(106, 27, 154, 0.8), rgba(74, 20, 140, 0.8)), 
-                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23e1bee7" width="1200" height="600"/><circle cx="300" cy="150" r="50" fill="%239c27b0" opacity="0.3"/><circle cx="900" cy="450" r="80" fill="%236a1b9a" opacity="0.2"/><text x="600" y="300" font-family="Arial" font-size="24" fill="%23666" text-anchor="middle">ARYA Wellness Center</text></svg>');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            text-align: center;
-            padding: 4rem 0;
+        
+        .consultant {
+            margin-bottom: 25px;
+            padding: 20px;
+            background: #f8f9ff;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
         }
-
-        .hero h2 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
+        
+        .consultant h3 {
+            color: #333;
+            margin-bottom: 8px;
+            font-size: 1.3em;
         }
-
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        /* ===================
-           CONSULTANTS GRID
-        =================== */
-        .consultants-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .consultant-card {
-            background: #f3e5f5;
-            padding: 2rem;
-            border-radius: 12px;
-            text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: 2px solid transparent;
-        }
-
-        .consultant-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(106, 27, 154, 0.2);
-            border-color: #6a1b9a;
-        }
-
-        .consultant-photo {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            margin: 0 auto 1rem;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            border: 3px solid #6a1b9a;
-            overflow: hidden;
-            background-color: #e1bee7;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        
+        .consultant .credentials {
             color: #666;
-            font-size: 0.9rem;
-            text-align: center;
+            font-size: 0.9em;
+            margin-bottom: 8px;
         }
-
-        .consultant-name {
-            color: #6a1b9a;
-            font-size: 1.4rem;
-            margin-bottom: 0.5rem;
-            font-weight: bold;
-        }
-
-        .consultant-specialty {
-            color: #4a148c;
+        
+        .consultant .specialization {
+            color: #555;
             font-weight: 500;
-            margin-bottom: 1rem;
         }
-
-        .consultant-credentials {
-            font-size: 0.9rem;
-            color: #666;
-            line-height: 1.4;
-        }
-
-        .consultant-phone {
-            color: #6a1b9a;
+        
+        .consultant .phone {
+            color: #667eea;
             font-weight: bold;
-            margin-top: 0.5rem;
-            font-size: 1.1rem;
+            margin-top: 8px;
         }
-
-        /* ===================
-           SERVICES GRID
-        =================== */
+        
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
+            gap: 20px;
+            margin-bottom: 20px;
         }
-
+        
         .service-category {
-            background: #f3e5f5;
-            padding: 1.5rem;
-            border-radius: 12px;
-            border-left: 4px solid #6a1b9a;
+            background: #f8f9ff;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
         }
-
+        
         .service-category h4 {
-            color: #6a1b9a;
-            margin-bottom: 1rem;
-            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 1.1em;
         }
-
+        
         .service-item {
-            background: white;
-            margin: 0.5rem 0;
-            padding: 1rem;
-            border-radius: 8px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border: 1px solid #e0e0e0;
+            padding: 8px 0;
+            border-bottom: 1px solid #e0e6ed;
         }
-
+        
+        .service-item:last-child {
+            border-bottom: none;
+        }
+        
         .service-name {
-            font-weight: 500;
-            color: #333;
-            flex: 1;
+            color: #555;
         }
-
+        
         .service-price {
-            color: #6a1b9a;
+            color: #667eea;
             font-weight: bold;
-            font-size: 1.1rem;
         }
-
-        .conditions-grid {
+        
+        .specialties-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
-            margin-top: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
         }
-
-        .condition-item {
-            background: #f3e5f5;
-            padding: 1rem;
+        
+        .specialty-item {
+            background: #f8f9ff;
+            padding: 15px;
             border-radius: 8px;
-            border-left: 4px solid #6a1b9a;
-            font-weight: 500;
-            color: #4a148c;
+            border-left: 4px solid #667eea;
+            color: #555;
         }
-
-        /* ===================
-           INFORMATION TABS
-        =================== */
-        .info-tabs {
-            margin-top: 2rem;
-        }
-
-        .tab-buttons {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-bottom: 2rem;
-        }
-
-        .tab-button {
-            background: #e1bee7;
-            color: #6a1b9a;
-            border: none;
-            padding: 0.8rem 1.5rem;
-            border-radius: 25px;
-            cursor: pointer;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-
-        .tab-button.active {
-            background: #6a1b9a;
-            color: white;
-        }
-
-        .tab-content {
-            display: none;
-            background: #f3e5f5;
-            padding: 2rem;
-            border-radius: 8px;
-        }
-
-        .tab-content.active {
-            display: block;
-        }
-
-        .tab-content h4 {
-            color: #6a1b9a;
-            margin-bottom: 1rem;
-        }
-
-        .tab-content ul {
-            list-style-position: inside;
-            margin-left: 1rem;
-        }
-
-        .tab-content li {
-            margin-bottom: 0.5rem;
-        }
-
-        /* ===================
-           PAYMENT SECTION
-        =================== */
-        .payment-section {
-            background: linear-gradient(135deg, #e8f5e8 0%, #c8e6c9 100%);
-        }
-
-        .payment-methods {
+        
+        .tips-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
+            gap: 20px;
         }
-
-        .payment-method {
-            background: white;
-            padding: 2rem;
-            border-radius: 12px;
+        
+        .tip-card {
+            background: #f8f9ff;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .tip-card h4 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .tip-card ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .tip-card li {
+            color: #555;
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .tip-card li:before {
+            content: "✓";
+            color: #667eea;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        .payment-section {
             text-align: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
-
-        .payment-method h4 {
-            color: #2e7d32;
-            margin-bottom: 1rem;
-        }
-
-        .qr-code-container {
-            width: 280px;
-            height: 280px;
-            margin: 1rem auto;
-            background: white;
-            border: 2px solid #e0e0e0;
-            border-radius: 12px;
-            padding: 15px;
+        
+        .payment-methods {
             display: flex;
-            align-items: center;
             justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 20px;
         }
-
-        .qr-code-image {
-            width: 100%;
-            height: 100%;
-            background-image: url('data:image/png;base64,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IAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQ
-
-        .upi-section {
-            margin-top: 1rem;
-        }
-
-        .upi-id {
-            background: #f8f9fa;
-            padding: 1rem;
-            border-radius: 8px;
-            margin: 1rem 0;
-            font-family: monospace;
-            font-weight: bold;
-            color: #6a1b9a;
-            word-break: break-all;
-        }
-
-        .payment-buttons {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-
-        .btn {
-            background: #6a1b9a;
-            color: white;
-            border: none;
-            padding: 1rem 2rem;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 1rem;
-            font-weight: 500;
-            transition: background-color 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-            text-align: center;
-        }
-
-        .btn:hover {
-            background: #4a148c;
-        }
-
-        .btn-success {
-            background: #2e7d32;
-        }
-
-        .btn-success:hover {
-            background: #1b5e20;
-        }
-
-        .btn-secondary {
-            background: #6c757d;
-        }
-
-        .btn-secondary:hover {
-            background: #495057;
-        }
-
-        /* ===================
-           FOOTER STYLES
-        =================== */
-        footer {
-            background: #6a1b9a;
-            color: white;
-            text-align: center;
-            padding: 2rem 0;
-            margin-top: 3rem;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .footer-section h4 {
-            margin-bottom: 1rem;
-        }
-
-        .footer-section p, .footer-section a {
-            color: rgba(255,255,255,0.9);
-            text-decoration: none;
-        }
-
-        .footer-section a:hover {
-            color: white;
-        }
-
-        /* ===================
-           RESPONSIVE STYLES
-        =================== */
-        @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            nav ul {
-                display: none;
-                flex-direction: column;
-                width: 100%;
-                gap: 1rem;
-            }
-
-            nav ul.show {
-                display: flex;
-            }
-
-            .mobile-menu {
-                display: block;
-            }
-
-            .hero h2 {
-                font-size: 2rem;
-            }
-
-            .section-title {
-                font-size: 1.5rem;
-            }
-
-            .consultants-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .payment-methods {
-                grid-template-columns: 1fr;
-            }
-
-            .tab-buttons {
-                flex-direction: column;
-            }
-
-            .payment-buttons {
-                gap: 0.5rem;
-            }
-
-            .footer-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-            .conditions-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* ===================
-           UTILITY CLASSES
-        =================== */
-        .text-center {
-            text-align: center;
-        }
-
-        .mt-2 {
-            margin-top: 2rem;
-        }
-
-        .mb-2 {
-            margin-bottom: 2rem;
-        }
-
-        .hidden {
-            display: none;
-        }
-
-        .discount-badge {
-            background: #4caf50;
-            color: white;
-            padding: 0.3rem 0.8rem;
+        
+        .payment-method {
+            background: #f8f9ff;
+            padding: 25px;
             border-radius: 15px;
-            font-size: 0.9rem;
-            font-weight: bold;
+            border: 2px solid #e0e6ed;
+            transition: all 0.3s ease;
         }
-
-        /* ===================
-           ANIMATIONS
-        =================== */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+        
+        .payment-method:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            border-color: #667eea;
         }
-
-        .section {
-            animation: fadeIn 0.6s ease-out;
+        
+        .payment-method h4 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+        
+        .footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 40px;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .services-grid,
+            .tips-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .payment-methods {
+                flex-direction: column;
+                align-items: center;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- =================== HEADER =================== -->
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">
-                    <div class="logo-img"></div>
-                    <div class="logo-text">
-                        <h1>ARYA</h1>
-                        <p>Ayurveda • Yoga • Research Center</p>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>Arya Ayurveda, Yoga & Research Center</h1>
+            <p>Multi-Specialty Ayurveda, Panchakarma, Yoga, Diet and Lifestyle Regulation & Wellness Center</p>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="contact-info">
+            <h3>📍 Location & Contact</h3>
+            <div class="address">
+                <strong>#1st Floor-C, Om Annexe</strong><br>
+                Shirur Park Main Road, Prashant Colony<br>
+                Vidyanagar, Hubballi 21, Karnataka, India<br>
+                <strong>Email:</strong> drkembhavi@live.com
+            </div>
+        </div>
+
+        <!-- Consultants Section -->
+        <div class="section">
+            <h2>👩‍⚕️ Our Expert Consultants</h2>
+            
+            <div class="consultant">
+                <h3>Dr. Aakash S. Kembhavi</h3>
+                <div class="credentials">M.D. (Ayu-Shalya), PGDMLS, M.S. (Counseling & Psychotherapy)</div>
+                <div class="specialization">Consulting Ayurveda Surgeon and Counselor</div>
+                <div class="phone">📞 98867 59499</div>
+            </div>
+            
+            <div class="consultant">
+                <h3>Dr. Anita Kadagad Kembhavi</h3>
+                <div class="credentials">M.D. (Ayu-Kaya Chikitsa), D.Y.S., D.Nat-Yoga (Ayu), D.Ac., M.A. (Psychology in Child Mental Health), YIC, MSc Yoga</div>
+                <div class="specialization">Consulting Ayurveda, Yoga, Naturopathy, Acupuncture Physician, Panchakarma Specialist and Counselor</div>
+                <div class="phone">📞 98867 59399</div>
+            </div>
+        </div>
+
+        <!-- Services Section -->
+        <div class="section">
+            <h2>🏥 Our Services & Pricing</h2>
+            
+            <div class="services-grid">
+                <div class="service-category">
+                    <h4>General Services</h4>
+                    <div class="service-item">
+                        <span class="service-name">One Time Registration Fee</span>
+                        <span class="service-price">₹100.00</span>
+                    </div>
+                    <div class="service-item">
+                        <span class="service-name">Consultation</span>
+                        <span class="service-price">₹300.00</span>
+                    </div>
+                    <div class="service-item">
+                        <span class="service-name">Follow-up Consultation (Within 30 Days)</span>
+                        <span class="service-price">₹150.00</span>
                     </div>
                 </div>
-                <nav>
-                    <button class="mobile-menu" onclick="toggleMenu()">☰</button>
-                    <ul id="nav-menu">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#consultants">Consultants</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#information">Information</a></li>
-                        <li><a href="#payment">Payment</a></li>
+
+                <div class="service-category">
+                    <h4>Panchakarma Treatments (Including Medicine)</h4>
+                    <div class="service-item">
+                        <span class="service-name">Vamana Karma</span>
+                        <span class="service-price">₹10,000.00</span>
+                    </div>
+                    <div class="service-item">
+                        <span class="service-name">Virechana Karma</span>
+                        <span class="service-price">₹8,500.00</span>
+                    </div>
+                    <div class="service-item">
+                        <span class="service-name">Basti Karma</span>
+                        <span class="service-price">₹8,000.00</span>
+                    </div>
+                    <div class="service-item">
+                        <span class="service-name">Nasya Karma</span>
+                        <span class="service-price">₹2,500.00</span>
+                    </div>
+                    <div class="service-item">
+                        <span class="service-name">Rakta Mokshana (Per Sitting)</span>
+                        <span class="service-price">₹750.00</span>
+                    </div>
+                </div>
+
+                <div class="service-category">
+                    <h4>Other Treatments (Exclusive of Medicine Cost)</h4>
+                    <div class="service-item">
+                        <span class="service-name">Sarvanga Abhyanga & Swedana / Day</span>
+                        <span class="service-price">₹750.00</span>
+                    </div>
+                    <div class="service-item">
+                        <span class="service-name">Sthanika Abhyanga & Nadi Sweda / Day</span>
+                        <span class="service-price">₹500.00</span>
+                    </div>
+                    <div class="service-item">
+                        <span class="service-name">Matra Basti / Day</span>
+                        <span class="service-price">₹300.00</span>
+                    </div>
+                    <div class="service-item">
+                        <span class="service-name">Kati Basti / Day</span>
+                        <span class="service-price">₹500.00</span>
+                    </div>
+                    <div class="service-item">
+                        <span class="service-name">Janu Basti / Day</span>
+                        <span class="service-price">₹500.00</span>
+                    </div>
+                    <div class="service-item">
+                        <span class="service-name">Shirodhara / Day</span>
+                        <span class="service-price">₹750.00</span>
+                    </div>
+                    <div class="service-item">
+                        <span class="service-name">Pinda Sweda / Day</span>
+                        <span class="service-price">₹500.00</span>
+                    </div>
+                    <div class="service-item">
+                        <span class="service-name">Shasthika Shali Pinda Sweda / Day</span>
+                        <span class="service-price">₹750.00</span>
+                    </div>
+                    <div class="service-item">
+                        <span class="service-name">Parisheka / Day</span>
+                        <span class="service-price">₹400.00</span>
+                    </div>
+                    <div class="service-item">
+                        <span class="service-name">Netra Tarpana / Day</span>
+                        <span class="service-price">₹250.00</span>
+                    </div>
+                    <div class="service-item">
+                        <span class="service-name">Agni Karma / Day</span>
+                        <span class="service-price">₹400.00</span>
+                    </div>
+                </div>
+
+                <div class="service-category">
+                    <h4>Special Offers</h4>
+                    <div class="service-item">
+                        <span class="service-name">Senior Citizens</span>
+                        <span class="service-price">20% Discount</span>
+                    </div>
+                    <div class="service-item">
+                        <span class="service-name">Ex-Service / Defence Personnel</span>
+                        <span class="service-price">20% Discount</span>
+                    </div>
+                    <div class="service-item">
+                        <span class="service-name">BPL Card Holders</span>
+                        <span class="service-price">15% Discount</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Specialties Section -->
+        <div class="section">
+            <h2>🎯 Our Specialties</h2>
+            <div class="specialties-grid">
+                <div class="specialty-item">Piles, Fissure and Fistula</div>
+                <div class="specialty-item">Obesity, Diabetes, High BP, Thyroid</div>
+                <div class="specialty-item">Sleep Disorders</div>
+                <div class="specialty-item">Osteoarthritis, Osteoporosis, Rheumatoid Arthritis etc.</div>
+                <div class="specialty-item">Paralysis, Disc, Spondylosis, Parkinsons and Other Neurology Problems</div>
+                <div class="specialty-item">PCOS, Menstrual Problems and Infertility</div>
+                <div class="specialty-item">Skin, Hair and Cosmetic Problems</div>
+                <div class="specialty-item">Stones, Prostate and Kidney Disease</div>
+                <div class="specialty-item">Gout, Varicose Veins, Diabetic Foot, Ulcers etc</div>
+                <div class="specialty-item">Acidity, Ulcers, Jaundice, Colitis, IBS etc.</div>
+                <div class="specialty-item">Asthma and Allergy</div>
+                <div class="specialty-item">All types of Cancer</div>
+                <div class="specialty-item">Alcohol De-Addiction</div>
+            </div>
+        </div>
+
+        <!-- Diet & Lifestyle Tips Section -->
+        <div class="section">
+            <h2>🌿 Diet & Lifestyle Tips</h2>
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <h4>Daily Routine (Dinacharya)</h4>
+                    <ul>
+                        <li>Wake up before sunrise (5-6 AM)</li>
+                        <li>Start day with warm water and meditation</li>
+                        <li>Practice yoga or light exercise</li>
+                        <li>Have regular meal times</li>
+                        <li>Sleep by 10 PM for optimal rest</li>
                     </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
-
-    <!-- =================== MAIN CONTENT =================== -->
-    <main>
-        <!-- HERO SECTION -->
-        <section id="home" class="hero">
-            <div class="container">
-                <h2>Welcome to ARYA</h2>
-                <p>Ayurveda, Yoga & Research Center - A Unit of Astanga Wellness Pvt Ltd<br>
-                Multi-specialty Ayurveda, Panchakarma, Yoga, Diet and Lifestyle Regulation & Wellness Center</p>
-            </div>
-        </section>
-
-        <div class="container">
-            <!-- =================== CONSULTANTS SECTION =================== -->
-            <section id="consultants" class="section">
-                <h3 class="section-title">Our Expert Consultants</h3>
-                <div class="consultants-grid">
-                    <!-- CONSULTANT 1 - Dr. Aakash S. Kembhavi -->
-                    <div class="consultant-card">
-                        <div class="consultant-photo">
-                            Replace with Dr. Aakash's photo
-                        </div>
-                        <h4 class="consultant-name">Dr. Aakash S. Kembhavi</h4>
-                        <p class="consultant-specialty">Consulting Ayurveda Surgeon and Counselor</p>
-                        <p class="consultant-credentials">
-                            M.D. (Ayu-Shalya), PGDMLS,<br>
-                            M.S. (Counseling & Psychotherapy)<br>
-                            25+ years experience
-                        </p>
-                        <p class="consultant-phone">📞 98867 59499</p>
-                    </div>
-
-                    <!-- CONSULTANT 2 - Dr. Anita Kadagad Kembhavi -->
-                    <div class="consultant-card">
-                        <div class="consultant-photo dr-anita"></div>
-                        <h4 class="consultant-name">Dr. Anita Kadagad Kembhavi</h4>
-                        <p class="consultant-specialty">Consulting Ayurveda, Yoga, Naturopathy, Acupuncture Physician, Panchakarma Specialist and Counselor</p>
-                        <p class="consultant-credentials">
-                            M.D. (Ayu-Kaya Chikitsa), D.Y.S., D.Nat-Yoga (Ayu),<br>
-                            D.Ac., M.A. (Psychology in Child Mental Health),<br>
-                            YIC, MSc Yoga<br>
-                            20+ years experience
-                        </p>
-                        <p class="consultant-phone">📞 98867 59399</p>
-                    </div>
                 </div>
-            </section>
-
-            <!-- =================== SERVICES SECTION =================== -->
-            <section id="services" class="section">
-                <h3 class="section-title">Our Services & Pricing</h3>
                 
-                <!-- Basic Services -->
-                <div class="services-grid">
-                    <div class="service-category">
-                        <h4>📋 Consultation Services</h4>
-                        <div class="service-item">
-                            <span class="service-name">One Time Registration Fee</span>
-                            <span class="service-price">₹100.00</span>
-                        </div>
-                        <div class="service-item">
-                            <span class="service-name">Consultation</span>
-                            <span class="service-price">₹300.00</span>
-                        </div>
-                        <div class="service-item">
-                            <span class="service-name">Follow-up Consultation (within 30 days)</span>
-                            <span class="service-price">₹150.00</span>
-                        </div>
-                    </div>
-
-                    <div class="service-category">
-                        <h4>🌿 Panchakarma Treatments (Including Medicine)</h4>
-                        <div class="service-item">
-                            <span class="service-name">Vamana Karma</span>
-                            <span class="service-price">₹10,000.00</span>
-                        </div>
-                        <div class="service-item">
-                            <span class="service-name">Virechana Karma</span>
-                            <span class="service-price">₹8,500.00</span>
-                        </div>
-                        <div class="service-item">
-                            <span class="service-name">Basti Karma</span>
-                            <span class="service-price">₹8,000.00</span>
-                        </div>
-                        <div class="service-item">
-                            <span class="service-name">Nasya Karma</span>
-                            <span class="service-price">₹2,500.00</span>
-                        </div>
-                        <div class="service-item">
-                            <span class="service-name">Rakta Mokshana (per sitting)</span>
-                            <span class="service-price">₹750.00</span>
-                        </div>
-                    </div>
-
-                    <div class="service-category">
-                        <h4>🏥 Other Treatments (Exclusive of Medicine Cost)</h4>
-                        <div class="service-item">
-                            <span class="service-name">Sarvanga Abhyanga & Swedana / Day</span>
-                            <span class="service-price">₹750.00</span>
-                        </div>
-                        <div class="service-item">
-                            <span class="service-name">Sthanika Abhyanga & Nadi Sweda / Day</span>
-                            <span class="service-price">₹500.00</span>
-                        </div>
-                        <div class="service-item">
-                            <span class="service-name">Matra Basti / Day</span>
-                            <span class="service-price">₹300.00</span>
-                        </div>
-                        <div class="service-item">
-                            <span class="service-name">Kati Basti / Day</span>
-                            <span class="service-price">₹500.00</span>
-                        </div>
-                        <div class="service-item">
-                            <span class="service-name">Janu Basti / Day</span>
-                            <span class="service-price">₹500.00</span>
-                        </div>
-                        <div class="service-item">
-                            <span class="service-name">Shirodhara / Day</span>
-                            <span class="service-price">₹750.00</span>
-                        </div>
-                        <div class="service-item">
-                            <span class="service-name">Pinda Sweda / Day</span>
-                            <span class="service-price">₹500.00</span>
-                        </div>
-                        <div class="service-item">
-                            <span class="service-name">Shasthika Shali Pinda Sweda / Day</span>
-                            <span class="service-price">₹750.00</span>
-                        </div>
-                        <div class="service-item">
-                            <span class="service-name">Parisheka / Day</span>
-                            <span class="service-price">₹400.00</span>
-                        </div>
-                        <div class="service-item">
-                            <span class="service-name">Netra Tarpana / Day</span>
-                            <span class="service-price">₹250.00</span>
-                        </div>
-                        <div class="service-item">
-                            <span class="service-name">Agni Karma / Day</span>
-                            <span class="service-price">₹400.00</span>
-                        </div>
-                    </div>
-
-                    <div class="service-category">
-                        <h4>🎯 Special Offers</h4>
-                        <div class="service-item">
-                            <span class="service-name">Senior Citizens</span>
-                            <span class="service-price discount-badge">20% Discount</span>
-                        </div>
-                        <div class="service-item">
-                            <span class="service-name">Ex-Service / Defence Personnel</span>
-                            <span class="service-price discount-badge">20% Discount</span>
-                        </div>
-                        <div class="service-item">
-                            <span class="service-name">BPL Card Holders</span>
-                            <span class="service-price discount-badge">15% Discount</span>
-                        </div>
-                    </div>
+                <div class="tip-card">
+                    <h4>Dietary Guidelines</h4>
+                    <ul>
+                        <li>Eat fresh, seasonal, and local foods</li>
+                        <li>Include all six tastes in meals</li>
+                        <li>Avoid processed and frozen foods</li>
+                        <li>Drink warm water throughout the day</li>
+                        <li>Eat in a calm, peaceful environment</li>
+                    </ul>
                 </div>
-
-                <!-- Conditions We Treat -->
-                <h4 style="color: #6a1b9a; margin-top: 3rem; margin-bottom: 1rem; text-align: center; font-size: 1.5rem;">Conditions We Treat</h4>
-                <div class="conditions-grid">
-                    <div class="condition-item">🔸 Piles, Fissure and Fistula</div>
-                    <div class="condition-item">🔸 Obesity, Diabetes, High BP, Thyroid</div>
-                    <div class="condition-item">🔸 Sleep Disorders</div>
-                    <div class="condition-item">🔸 Osteoarthritis, Osteoporosis, Rheumatoid Arthritis</div>
-                    <div class="condition-item">🔸 Paralysis, Disc, Spondylosis, Parkinsons and Other Neurology Problems</div>
-                    <div class="condition-item">🔸 PCOS, Menstrual Problems and Infertility</div>
-                    <div class="condition-item">🔸 Skin, Hair and Cosmetic Problems</div>
-                    <div class="condition-item">🔸 Stones, Prostate and Kidney Disease</div>
-                    <div class="condition-item">🔸 Gout, Varicose Veins, Diabetic Foot, Ulcers etc</div>
-                    <div class="condition-item">🔸 Acidity, Ulcers, Jaundice, Colitis, IBS etc</div>
-                    <div class="condition-item">🔸 Asthma and Allergy</div>
-                    <div class="condition-item">🔸 All types of Cancer</div>
-                    <div class="condition-item">🔸 Alcohol De-Addiction</div>
+                
+                <div class="tip-card">
+                    <h4>Mental Wellness</h4>
+                    <ul>
+                        <li>Practice daily meditation</li>
+                        <li>Maintain positive relationships</li>
+                        <li>Engage in meaningful activities</li>
+                        <li>Limit screen time before bed</li>
+                        <li>Practice gratitude daily</li>
+                    </ul>
                 </div>
-            </section>
-
-            <!-- =================== INFORMATION SECTION =================== -->
-            <section id="information" class="section">
-                <h3 class="section-title">Health Information & Guidelines</h3>
-                <div class="info-tabs">
-                    <div class="tab-buttons">
-                        <button class="tab-button active" onclick="showTab('diet')">Diet Guidelines</button>
-                        <button class="tab-button" onclick="showTab('lifestyle')">Lifestyle Tips</button>
-                        <button class="tab-button" onclick="showTab('ayurveda')">Ayurvedic Principles</button>
-                        <button class="tab-button" onclick="showTab('yoga')">Yoga & Wellness</button>
-                        <button class="tab-button" onclick="showTab('prevention')">Prevention Tips</button>
-                    </div>
-
-                    <div id="diet" class="tab-content active">
-                        <h4>Ayurvedic Diet Guidelines</h4>
-                        <ul>
-                            <li>Eat fresh, seasonal, and locally sourced foods according to your dosha</li>
-                            <li>Include six tastes (sweet, sour, salty, pungent, bitter, astringent) in your meals</li>
-                            <li>Choose whole grains, fresh vegetables, and fruits appropriate for your constitution</li>
-                            <li>Avoid processed foods, excessive sugar, and foods that aggravate your dosha</li>
-                            <li>Drink warm water throughout the day, especially upon waking</li>
-                            <li>Practice mindful eating in a calm environment</li>
-                            <li>Include digestive spices like ginger, cumin, coriander, and turmeric</li>
-                            <li>Maintain regular meal timings and avoid overeating</li>
-                            <li>Consider your digestive fire (Agni) when choosing foods</li>
-                        </ul>
-                    </div>
-
-                    <div id="lifestyle" class="tab-content">
-                        <h4>Ayurvedic Lifestyle Recommendations</h4>
-                        <ul>
-                            <li>Follow a daily routine (Dinacharya) aligned with natural cycles</li>
-                            <li>Wake up early, preferably before sunrise</li>
-                            <li>Practice oil pulling and tongue scraping for oral health</li>
-                            <li>Take regular oil massages (Abhyanga) for body nourishment</li>
-                            <li>Avoid suppressing natural urges (Vegas)</li>
-                            <li>Balance work, rest, and recreational activities</li>
-                            <li>Spend time in nature and get adequate sunlight</li>
-                            <li>Maintain emotional balance through meditation and counseling</li>
-                            <li>Follow seasonal regimens (Ritucharya) for optimal health</li>
-                        </ul>
-                    </div>
-
-                    <div id="ayurveda" class="tab-content">
-                        <h4>Core Ayurvedic Principles</h4>
-                        <ul>
-                            <li>Understand your unique constitution (Prakriti) and current state (Vikriti)</li>
-                            <li>Balance the three doshas: Vata, Pitta, and Kapha</li>
-                            <li>Strengthen your digestive fire (Agni) for proper metabolism</li>
-                            <li>Support natural detoxification through proper elimination</li>
-                            <li>Use herbs and treatments specific to your individual needs</li>
-                            <li>Practice Panchakarma for deep cleansing and rejuvenation</li>
-                            <li>Maintain mental clarity through Satvavajaya (psychotherapy)</li>
-                            <li>Follow ethical conduct (Achar Rasayana) for holistic wellness</li>
-                            <li>Seek balance in all aspects of life - physical, mental, and spiritual</li>
-                        </ul>
-                    </div>
-
-                    <div id="yoga" class="tab-content">
-                        <h4>Yoga & Wellness Practices</h4>
-                        <ul>
-                            <li>Practice daily yoga asanas appropriate for your body type</li>
-                            <li>Include pranayama (breathing exercises) in your routine</li>
-                            <li>Start with simple poses and gradually advance</li>
-                            <li>Practice meditation for mental clarity and peace</li>
-                            <li>Use yoga therapy for specific health conditions</li>
-                            <li>Combine physical poses with mindful breathing</li>
-                            <li>Practice yoga nidra for deep relaxation</li>
-                            <li>Include dharana (concentration) and dhyana (meditation)</li>
-                            <li>Follow the eight limbs of yoga for complete wellness</li>
-                        </ul>
-                    </div>
-
-                    <div id="prevention" class="tab-content">
-                        <h4>Disease Prevention & Health Maintenance</h4>
-                        <ul>
-                            <li>Get regular Ayurvedic consultations and pulse diagnosis</li>
-                            <li>Follow preventive Panchakarma treatments seasonally</li>
-                            <li>Maintain proper hygiene and cleanliness</li>
-                            <li>Build immunity through Rasayana (rejuvenative) therapies</li>
-                            <li>Address imbalances early before they manifest as disease</li>
-                            <li>Practice stress management through yoga and meditation</li>
-                            <li>Maintain healthy relationships and social connections</li>
-                            <li>Stay informed about Ayurvedic principles and self-care</li>
-                            <li>Seek guidance for constitutional analysis and personalized care</li>
-                        </ul>
-                    </div>
+                
+                <div class="tip-card">
+                    <h4>Seasonal Care</h4>
+                    <ul>
+                        <li>Adjust diet according to seasons</li>
+                        <li>Use appropriate oils for massage</li>
+                        <li>Modify exercise intensity with weather</li>
+                        <li>Follow seasonal detox practices</li>
+                        <li>Dress according to climate</li>
+                    </ul>
                 </div>
-            </section>
+            </div>
+        </div>
 
-            <!-- =================== PAYMENT SECTION =================== -->
-            <section id="payment" class="section payment-section">
-                <h3 class="section-title">Easy Payment Options</h3>
+        <!-- Payment Section -->
+        <div class="section">
+            <h2>💳 Payment Methods</h2>
+            <div class="payment-section">
+                <p>We accept multiple payment methods for your convenience:</p>
+                
                 <div class="payment-methods">
-                    <!-- GOOGLE PAY QR CODE -->
                     <div class="payment-method">
-                        <h4>📱 Google Pay QR Code</h4>
-                        <div class="qr-code-container"></div>
-                        <p><strong>Astanga Wellness Pvt Ltd</strong><br>
-                        Phone: +91 98867 59499<br>
-                        UPI ID: 9886759499@okbizaxis</p>
-                        <p style="margin-top: 1rem; color: #666;">Scan the QR code with any UPI app to make payments directly to our business account.</p>
+                        <h4>Digital Payments</h4>
+                        <p>• UPI Payment: <strong>9886759499@okbizaxis</strong></p>
+                        <p>• Cash payments accepted at clinic</p>
+                        <p>• QR Code available at clinic for easy scanning</p>
+                        <p>• Net Banking and Card payments</p>
                     </div>
-
-                    <!-- UPI PAYMENT -->
-                    <div class="payment-method">
-                        <h4>💳 UPI Payment</h4>
-                        <div class="upi-section">
-                            <p>Our UPI ID:</p>
-                            <div class="upi-id" id="upi-id">9886759499@okbizaxis</div>
-                            <div class="payment-buttons">
-                                <button class="btn btn-success" onclick="copyUPIId()">📋 Copy UPI ID</button>
-                                <a href="#" class="btn" onclick="openUPIApp()" id="upi-link">💰 Pay Now via UPI</a>
-                                <button class="btn btn-secondary" onclick="shareUPIDetails()">📤 Share Payment Details</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- PAYMENT INSTRUCTIONS -->
-                <div class="mt-2">
-                    <h4 style="color: #2e7d32; text-align: center; margin-bottom: 1rem;">Payment Instructions</h4>
-                    <div style="background: white; padding: 1.5rem; border-radius: 8px;">
-                        <ol style="margin-left: 1.5rem;">
-                            <li>Choose your preferred payment method above</li>
-                            <li>For QR code: Scan with any UPI app (PhonePe, Paytm, Google Pay, etc.)</li>
-                            <li>For UPI ID: Copy the ID and paste in your UPI app</li>
-                            <li>Enter the amount as advised by our consultant</li>
-                            <li>Complete the payment and save the transaction screenshot</li>
-                            <li>Share the payment confirmation with our clinic</li>
-                        </ol>
-                    </div>
-                </div>
-            </section>
-        </div>
-    </main>
-
-    <!-- =================== FOOTER =================== -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>Contact Information</h4>
-                    <p>📍 ARYA - A Unit of Astanga Wellness Pvt Ltd</p>
-                    <p>Shop No 1 F-C, Om Annexe</p>
-                    <p>Shirur Park Main Road, Prashant Colony</p>
-                    <p>Vidyanagar, Hubli - 580031, Karnataka, India</p>
-                    <p>📞 Dr. Aakash: 98867 59499</p>
-                    <p>📞 Dr. Anita: 98867 59399</p>
-                    <p>📧 drkembhavi@live.com</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Working Hours</h4>
-                    <p>Monday - Saturday: 9:00 AM - 1:00 PM</p>
-                    <p>                   4:00 PM - 8:00 PM</p>
-                    <p>Sunday: 9:00 AM - 1:00 PM</p>
-                    <p>Consultation by appointment preferred</p>
-                    <p>Emergency: Call before visiting</p>
-                </div>
-                <div class="footer-section">
-                    <h4>About ARYA</h4>
-                    <p>ARYA is a multi-specialty Ayurveda, Panchakarma, Yoga, Diet and Lifestyle Regulation & Wellness Center. We combine traditional Ayurvedic wisdom with modern medical approaches for comprehensive healthcare.</p>
-                    <p style="margin-top: 1rem; font-weight: bold;">SWARNA PRASHANA Available</p>
                 </div>
             </div>
-            <div style="border-top: 1px solid rgba(255,255,255,0.2); padding-top: 1rem;">
-                <p>&copy; 2025 ARYA - Ayurveda, Yoga & Research Center, Hubli. A Unit of Astanga Wellness Pvt Ltd. All rights reserved.</p>
+        </div>
+
+        <!-- WhatsApp Contact Section -->
+        <div class="section">
+            <h2>📱 Contact Through WhatsApp</h2>
+            <div class="payment-section">
+                <p>Connect with us instantly on WhatsApp for appointments, queries, and payment assistance:</p>
+                
+                <div class="payment-methods">
+                    <div class="payment-method">
+                        <h4>Dr. Aakash S. Kembhavi</h4>
+                        <p><a href="https://wa.me/919886759499" target="_blank" style="color: #25D366; text-decoration: none; font-weight: bold;">📱 +91 98867 59499</a></p>
+                        <p>Available for consultations and appointment bookings</p>
+                    </div>
+                    
+                    <div class="payment-method">
+                        <h4>Dr. Anita Kadagad Kembhavi</h4>
+                        <p><a href="https://wa.me/919886759399" target="_blank" style="color: #25D366; text-decoration: none; font-weight: bold;">📱 +91 98867 59399</a></p>
+                        <p>Available for consultations and treatment guidance</p>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 20px; padding: 15px; background: #f8f9ff; border-radius: 10px; border-left: 4px solid #25D366;">
+                    <p style="color: #333; font-weight: bold; margin: 0;">💬 Request for Payment QR Code through WhatsApp</p>
+                    <p style="color: #666; margin: 5px 0 0 0; font-size: 0.9em;">Get instant access to our payment QR codes via WhatsApp</p>
+                </div>
             </div>
         </div>
-    </footer>
 
-    <!-- =================== JAVASCRIPT =================== -->
-    <script>
-        // =================== NAVIGATION FUNCTIONS ===================
-        function toggleMenu() {
-            const menu = document.getElementById('nav-menu');
-            menu.classList.toggle('show');
-        }
-
-        // =================== TAB FUNCTIONALITY ===================
-        function showTab(tabName) {
-            // Hide all tab contents
-            const tabContents = document.querySelectorAll('.tab-content');
-            tabContents.forEach(content => content.classList.remove('active'));
-            
-            // Remove active class from all buttons
-            const tabButtons = document.querySelectorAll('.tab-button');
-            tabButtons.forEach(button => button.classList.remove('active'));
-            
-            // Show selected tab content
-            document.getElementById(tabName).classList.add('active');
-            
-            // Add active class to clicked button
-            event.target.classList.add('active');
-        }
-
-        // =================== PAYMENT FUNCTIONS ===================
-        
-        const UPI_ID = '9886759499@okbizaxis';
-        const BUSINESS_NAME = 'Astanga Wellness Pvt Ltd';
-
-        function copyUPIId() {
-            const upiId = document.getElementById('upi-id').textContent;
-            navigator.clipboard.writeText(upiId).then(() => {
-                alert('UPI ID copied to clipboard!');
-            }).catch(() => {
-                // Fallback for older browsers
-                const textArea = document.createElement('textarea');
-                textArea.value = upiId;
-                document.body.appendChild(textArea);
-                textArea.select();
-                document.execCommand('copy');
-                document.body.removeChild(textArea);
-                alert('UPI ID copied to clipboard!');
-            });
-        }
-
-        function openUPIApp() {
-            const amount = '';
-            const description = 'Payment to ARYA - Astanga Wellness';
-            
-            const upiUrl = `upi://pay?pa=${UPI_ID}&pn=${encodeURIComponent(BUSINESS_NAME)}&tn=${encodeURIComponent(description)}${amount ? '&am=' + amount : ''}`;
-            
-            window.location.href = upiUrl;
-            
-            setTimeout(() => {
-                alert('If UPI app didn\'t open, please copy the UPI ID and paste it in your preferred UPI app.');
-            }, 2000);
-        }
-
-        function shareUPIDetails() {
-            const paymentDetails = `
-Payment Details for ARYA - Ayurveda, Yoga & Research Center
-
-UPI ID: ${UPI_ID}
-Business Name: ${BUSINESS_NAME}
-Phone: +91 98867 59499
-
-Instructions:
-1. Open any UPI app (PhonePe, Paytm, Google Pay, etc.)
-2. Choose "Pay to UPI ID" or "Pay to Phone Number"
-3. Enter the UPI ID: ${UPI_ID}
-4. Enter the amount as advised by our consultant
-5. Complete the payment
-6. Share payment confirmation with the clinic
-
-Address: Shop No 1 F-C, Om Annexe, Shirur Park Main Road
-Prashant Colony, Vidyanagar, Hubli - 580031, Karnataka
-            `.trim();
-
-            if (navigator.share) {
-                navigator.share({
-                    title: 'Payment Details - ARYA Wellness Center',
-                    text: paymentDetails
-                });
-            } else {
-                navigator.clipboard.writeText(paymentDetails).then(() => {
-                    alert('Payment details copied to clipboard! You can share this information.');
-                }).catch(() => {
-                    alert('Payment details:\n\n' + paymentDetails);
-                });
-            }
-        }
-
-        // =================== SMOOTH SCROLLING ===================
-        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-                document.getElementById('nav-menu').classList.remove('show');
-            });
-        });
-
-        // =================== INITIALIZATION ===================
-        document.addEventListener('DOMContentLoaded', function() {
-            console.log('ARYA - Ayurveda, Yoga & Research Center app loaded successfully!');
-            
-            const upiLink = document.getElementById('upi-link');
-            upiLink.onclick = openUPIApp;
-        });
-    </script>
+        <!-- Footer -->
+        <div class="footer">
+            <p>&copy; 2024 Arya Ayurveda, Yoga & Research Center. All rights reserved.</p>
+            <p>Holistic healing through traditional Ayurveda and modern wellness practices.</p>
+        </div>
+    </div>
 </body>
 </html>
