@@ -1,352 +1,927 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Jain AGM Ayurvedic Clinic</title>
-  <meta name="description" content="Jain AGM Ayurvedic Clinic - Consultants, Services, Patient Info, Payments" />
-  <style>
-    /* ======= Simple responsive styling (inline for single-file deploy) ======= */
-    :root{--accent:#0f766e;--muted:#6b7280;--bg:#f8fafc;--card:#ffffff}
-    *{box-sizing:border-box}
-    body{font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial;line-height:1.4;margin:0;background:var(--bg);color:#0f172a}
-    header{background:linear-gradient(90deg,#ecfccb, #bbf7d0);padding:20px 16px;box-shadow:0 1px 4px rgba(2,6,23,0.06)}
-    .container{max-width:1100px;margin:0 auto;padding:24px}
-    .brand{display:flex;gap:12px;align-items:center}
-    .logo{width:56px;height:56px;border-radius:8px;background:linear-gradient(135deg,var(--accent),#0ea5a4);display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
-    nav{margin-left:auto}
-    nav a{margin-left:12px;color:var(--accent);text-decoration:none;font-weight:600}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr Kembhavi's Astanga Wellness Pvt Ltd - Your Trusted Medical Partner</title>
+    <style>
+        /* ===================
+           GLOBAL STYLES
+        =================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    .hero{display:flex;gap:24px;align-items:center;padding:28px 0}
-    .hero .lead{flex:1}
-    .hero h1{margin:0;font-size:28px}
-    .hero p{color:var(--muted);margin:8px 0 0}
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
 
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .card{background:var(--card);padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(15,23,42,0.06)}
-    .card h3{margin:0 0 8px}
-    .consultant{display:flex;gap:12px;align-items:center}
-    .avatar{width:64px;height:64px;border-radius:8px;background:#e6eef2;display:flex;align-items:center;justify-content:center;font-weight:700}
-    .small{font-size:14px;color:var(--muted)}
-    .btn{display:inline-block;padding:8px 12px;border-radius:8px;background:var(--accent);color:white;text-decoration:none;font-weight:600}
-    .muted{color:var(--muted)}
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
-    /* Payment area */
-    .payment-qr{display:flex;gap:16px;align-items:center}
-    .qr-wrap{width:160px;height:160px;border-radius:8px;background:#fff;border:1px dashed #e2e8f0;display:flex;align-items:center;justify-content:center}
-    .copy-row{display:flex;gap:8px;align-items:center;margin-top:8px}
+        /* ===================
+           HEADER STYLES
+        =================== */
+        header {
+            background: linear-gradient(135deg, #2c5aa0 0%, #1e3d72 100%);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
 
-    footer{padding:20px 0;color:var(--muted);text-align:center}
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
 
-    /* Responsive */
-    @media (max-width:900px){
-      .grid{grid-template-columns:repeat(2,1fr)}
-    }
-    @media (max-width:640px){
-      .hero{flex-direction:column;align-items:flex-start}
-      .grid{grid-template-columns:1fr}
-      nav{margin-left:0;margin-top:12px}
-      .payment-qr{flex-direction:column;align-items:flex-start}
-    }
+        .logo h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.2rem;
+        }
 
-    /* Simple modal */
-    .modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(2,6,23,0.5);z-index:40}
-    .modal .modal-card{width:92%;max-width:680px;background:white;padding:20px;border-radius:12px}
-  </style>
+        .logo p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* ===================
+           NAVIGATION STYLES
+        =================== */
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s ease;
+        }
+
+        nav a:hover {
+            opacity: 0.8;
+        }
+
+        .mobile-menu {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* ===================
+           MAIN CONTENT STYLES
+        =================== */
+        main {
+            padding: 2rem 0;
+        }
+
+        .section {
+            background: white;
+            margin: 2rem 0;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .section-title {
+            color: #2c5aa0;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            border-bottom: 3px solid #2c5aa0;
+            padding-bottom: 0.5rem;
+        }
+
+        /* ===================
+           HERO SECTION
+        =================== */
+        .hero {
+            background: linear-gradient(rgba(44, 90, 160, 0.8), rgba(30, 61, 114, 0.8)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23e3f2fd" width="1200" height="600"/><text x="600" y="300" font-family="Arial" font-size="24" fill="%23666" text-anchor="middle">Replace with clinic hero image</text></svg>');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 4rem 0;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* ===================
+           CONSULTANTS GRID
+        =================== */
+        .consultants-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .consultant-card {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .consultant-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(44, 90, 160, 0.2);
+            border-color: #2c5aa0;
+        }
+
+        .consultant-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            background: linear-gradient(45deg, #e3f2fd, #bbdefb);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            color: #666;
+            text-align: center;
+        }
+
+        .consultant-name {
+            color: #2c5aa0;
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .consultant-specialty {
+            color: #666;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        .consultant-credentials {
+            font-size: 0.9rem;
+            color: #888;
+        }
+
+        /* ===================
+           SERVICES GRID
+        =================== */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .service-item {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #2c5aa0;
+            transition: background-color 0.3s ease;
+        }
+
+        .service-item:hover {
+            background-color: #e3f2fd;
+        }
+
+        .service-item h4 {
+            color: #2c5aa0;
+            margin-bottom: 0.5rem;
+        }
+
+        /* ===================
+           INFORMATION TABS
+        =================== */
+        .info-tabs {
+            margin-top: 2rem;
+        }
+
+        .tab-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .tab-button {
+            background: #e3f2fd;
+            color: #2c5aa0;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .tab-button.active {
+            background: #2c5aa0;
+            color: white;
+        }
+
+        .tab-content {
+            display: none;
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 8px;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .tab-content h4 {
+            color: #2c5aa0;
+            margin-bottom: 1rem;
+        }
+
+        .tab-content ul {
+            list-style-position: inside;
+            margin-left: 1rem;
+        }
+
+        .tab-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* ===================
+           PAYMENT SECTION
+        =================== */
+        .payment-section {
+            background: linear-gradient(135deg, #e8f5e8 0%, #c8e6c9 100%);
+        }
+
+        .payment-methods {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .payment-method {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .payment-method h4 {
+            color: #2e7d32;
+            margin-bottom: 1rem;
+        }
+
+        .qr-placeholder {
+            width: 200px;
+            height: 200px;
+            margin: 1rem auto;
+            background: #f5f5f5;
+            border: 2px dashed #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #666;
+            font-size: 0.9rem;
+            border-radius: 8px;
+        }
+
+        .upi-section {
+            margin-top: 1rem;
+        }
+
+        .upi-id {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            font-family: monospace;
+            font-weight: bold;
+            color: #2c5aa0;
+            word-break: break-all;
+        }
+
+        .payment-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .btn {
+            background: #2c5aa0;
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background: #1e3d72;
+        }
+
+        .btn-success {
+            background: #2e7d32;
+        }
+
+        .btn-success:hover {
+            background: #1b5e20;
+        }
+
+        .btn-secondary {
+            background: #6c757d;
+        }
+
+        .btn-secondary:hover {
+            background: #495057;
+        }
+
+        /* ===================
+           FOOTER STYLES
+        =================== */
+        footer {
+            background: #2c5aa0;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 1rem;
+        }
+
+        .footer-section p, .footer-section a {
+            color: rgba(255,255,255,0.9);
+            text-decoration: none;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        /* ===================
+           RESPONSIVE STYLES
+        =================== */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                gap: 1rem;
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            .mobile-menu {
+                display: block;
+            }
+
+            .hero h2 {
+                font-size: 2rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .consultants-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .payment-methods {
+                grid-template-columns: 1fr;
+            }
+
+            .tab-buttons {
+                flex-direction: column;
+            }
+
+            .payment-buttons {
+                gap: 0.5rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+
+        /* ===================
+           UTILITY CLASSES
+        =================== */
+        .text-center {
+            text-align: center;
+        }
+
+        .mt-2 {
+            margin-top: 2rem;
+        }
+
+        .mb-2 {
+            margin-bottom: 2rem;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        /* ===================
+           ANIMATIONS
+        =================== */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .section {
+            animation: fadeIn 0.6s ease-out;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <div class="container" style="display:flex;align-items:center">
-      <div class="brand">
-        <div class="logo">JG</div>
-        <div>
-          <div style="font-weight:800">Jain AGM Ayurvedic Clinic</div>
-          <div class="small">Varur, Karnataka — Ayurveda Clinic & Teaching Hospital</div>
-        </div>
-      </div>
-      <nav>
-        <a href="#consultants">Consultants</a>
-        <a href="#services">Services</a>
-        <a href="#info">Information</a>
-        <a href="#payment">Payment</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <main class="container">
-    <section class="hero">
-      <div class="lead">
-        <h1>Authentic Ayurvedic care — clinical practice & teaching</h1>
-        <p class="muted">Consultants, treatments, student modules and clear lifestyle guidance. Book or pay via UPI/QR.</p>
-        <p style="margin-top:12px"><a class="btn" href="#consultants">View Consultants</a></p>
-      </div>
-      <div style="width:320px;background:linear-gradient(180deg,#ecfccb,#bbf7d0);padding:16px;border-radius:10px">
-        <strong>Clinic at a glance</strong>
-        <div class="small" style="margin-top:6px">OPD Hours: Mon–Sat 9:00–5:00</div>
-        <div class="small">Phone: +91-XXXXXXXXXX</div>
-        <div style="margin-top:8px"><a class="btn" href="#contact">Get Directions</a></div>
-      </div>
-    </section>
-
-    <!-- Consultants -->
-    <section id="consultants" style="margin-top:18px">
-      <h2>Our Consultants</h2>
-      <p class="small">Click a consultant to view details and visiting hours.</p>
-      <div class="grid" style="margin-top:12px">
-        <!-- Repeat this card for each consultant; replace image and text -->
-        <div class="card">
-          <div class="consultant">
-            <div class="avatar">DR</div>
-            <div>
-              <div style="font-weight:700">Dr. A. K. Kembhavi</div>
-              <div class="small">Head of Department — Kayachikitsa</div>
-              <div class="small">Visiting: Mon, Wed 10:00–1:00</div>
-            </div>
-          </div>
-          <p class="small" style="margin-top:12px">Special interests: Panchakarma, chronic pain management, lifestyle therapy.</p>
-          <p style="margin-top:8px"><a href="#" class="btn" onclick="openConsultant(event,'Dr. A. K. Kembhavi','MD (Ayurveda)\nHead: Kayachikitsa\nExperience: 18 years\nVisiting hours: Mon, Wed 10:00–1:00\nContact: +91-XXXXXXXXXX')">View</a></p>
-        </div>
-
-        <div class="card">
-          <div class="consultant">
-            <div class="avatar">MS</div>
-            <div>
-              <div style="font-weight:700">Dr. M. S. Patil</div>
-              <div class="small">Panchakarma Specialist</div>
-              <div class="small">Visiting: Tue, Thu 2:00–5:00</div>
-            </div>
-          </div>
-          <p class="small" style="margin-top:12px">Special interests: Detoxification therapies, Nasya, Vamana.</p>
-          <p style="margin-top:8px"><a href="#" class="btn" onclick="openConsultant(event,'Dr. M. S. Patil','BAMS\nPanchakarma Specialist\nVisiting: Tue, Thu 2:00–5:00\nContact: +91-XXXXXXXXXX')">View</a></p>
-        </div>
-
-        <div class="card">
-          <div class="consultant">
-            <div class="avatar">RK</div>
-            <div>
-              <div style="font-weight:700">Dr. R. K. Sharma</div>
-              <div class="small">Student Clinical Supervisor</div>
-              <div class="small">Visiting: Fri 9:00–12:00</div>
-            </div>
-          </div>
-          <p class="small" style="margin-top:12px">Special interests: Clinical education, case-based learning and assessments.</p>
-          <p style="margin-top:8px"><a href="#" class="btn" onclick="openConsultant(event,'Dr. R. K. Sharma','MD (Ayurveda)\nClinical Supervisor\nVisiting: Fri 9:00–12:00\nContact: +91-XXXXXXXXXX')">View</a></p>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Credentials -->
-    <section id="credentials" style="margin-top:20px">
-      <h2>Credentials & Certificates</h2>
-      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:8px">
-        <!-- Replace these images with real certificate thumbnails in the repo. -->
-        <div class="card" style="width:240px"> 
-          <strong>NCISM Recognition</strong>
-          <div class="small" style="margin-top:8px">Accreditation & approvals</div>
-        </div>
-        <div class="card" style="width:240px"> 
-          <strong>Clinical Teaching Hospital</strong>
-          <div class="small" style="margin-top:8px">Affiliated college credentials</div>
-        </div>
-        <div class="card" style="width:240px"> 
-          <strong>ISO Certificate</strong>
-          <div class="small" style="margin-top:8px">(If available)</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Services -->
-    <section id="services" style="margin-top:20px">
-      <h2>Services Offered</h2>
-      <div class="grid" style="margin-top:12px">
-        <div class="card">
-          <h3>OPD Consultation</h3>
-          <div class="small">Detailed Ayurvedic consult, treatment plan and follow-up.</div>
-        </div>
-        <div class="card">
-          <h3>Panchakarma</h3>
-          <div class="small">Detox programs, Vamana, Virechana, Basti, Nasya.</div>
-        </div>
-        <div class="card">
-          <h3>Teleconsultation</h3>
-          <div class="small">Video & phone consultations for follow-ups and distant patients.</div>
-        </div>
-        <div class="card">
-          <h3>Clinic Pharmacy</h3>
-          <div class="small">Certified medicines & personalized formulations.</div>
-        </div>
-        <div class="card">
-          <h3>Student Clinical Module</h3>
-          <div class="small">Case logging, supervisor review, PBL integration.</div>
-        </div>
-        <div class="card">
-          <h3>Workshops</h3>
-          <div class="small">Lifestyle & diet workshops for patients and students.</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Information / Advice -->
-    <section id="info" style="margin-top:20px">
-      <h2>General Instructions — Diet & Lifestyle</h2>
-      <div class="card" style="margin-top:12px">
-        <h3>Daily Routine (Dinacharya)</h3>
-        <ul class="small">
-          <li>Wake up early (Brahmamuhurta) — gentle oiling and tongue scraping.</li>
-          <li>Light exercise or yoga, then warm water on empty stomach.</li>
-          <li>Regular meal times; prefer warm, freshly cooked food suitable to your constitution.</li>
-          <li>Avoid heavy, stale, and incompatible foods; reduce processed sugar and deep-fried items.</li>
-        </ul>
-        <h3 style="margin-top:8px">Lifestyle Tips</h3>
-        <ul class="small">
-          <li>Sleep 6–8 hours; maintain a regular sleep schedule.</li>
-          <li>Manage stress with breathing techniques and meditation.</li>
-          <li>Follow doctor-prescribed herbal formulations and record any changes.</li>
-        </ul>
-        <p class="small" style="margin-top:8px">(Replace or expand this content with clinic-specific advice. Avoid posting individualized medical advice publicly.)</p>
-      </div>
-    </section>
-
-    <!-- Payment section -->
-    <section id="payment" style="margin-top:20px">
-      <h2>Payments</h2>
-      <p class="small">Scan the clinic's Google Business QR code or tap the UPI link on a phone to pay. For receipts/confirmation, please contact the clinic.</p>
-      <div class="card" style="display:flex;gap:16px;flex-wrap:wrap;align-items:center">
-        <div class="payment-qr">
-          <div class="qr-wrap">
-            <!-- Replace 'qr-placeholder.png' with your Google Business QR file in the same repo. -->
-            <img id="qrImg" src="qr-placeholder.png" alt="Google Business QR placeholder" style="max-width:100%;max-height:100%;border-radius:8px;cursor:pointer" onclick="openImage(this.src)" />
-          </div>
-          <div>
-            <div style="font-weight:700">Pay via UPI</div>
-            <div class="small">Tap to open UPI app (mobile) or scan QR with any UPI app.</div>
-            <div class="copy-row">
-              <!-- IMPORTANT: replace the value of UPI_ID in the <script> below with your real UPI ID (e.g. clinic@hdfcbank) -->
-              <input type="text" id="upiId" value="clinic@upi" readonly style="border:1px solid #e6eef2;padding:8px;border-radius:8px" />
-              <button class="btn" onclick="copyUPI()">Copy</button>
-            </div>
-            <div style="margin-top:8px">
-              <a id="upiLink" href="#" class="btn" onclick="openUPI(event)">Pay ₹ (Tap)</a>
-              <div class="small" style="margin-top:6px">Tip: from a desktop you can scan the QR with your phone's camera.</div>
-            </div>
-          </div>
-        </div>
-
-        <div style="flex:1;min-width:240px">
-          <div class="small">If you want the site to initiate a UPI payment from mobile, set the correct UPI ID and optionally a default amount in the JavaScript. The current template uses a placeholder.</div>
-          <div style="margin-top:8px">
-            <strong>Notes on receipts:</strong>
-            <div class="small">This static site cannot automatically verify payments. For reconciliation, ask patients to send a screenshot or integrate a payment gateway / backend later.</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" style="margin-top:20px;margin-bottom:24px">
-      <h2>Contact & Location</h2>
-      <div class="grid" style="margin-top:12px;grid-template-columns:1fr 320px">
-        <div>
-          <div class="card">
-            <h3>Clinic Address</h3>
-            <div class="small">Jain AGM Ayurvedic Medical College & Hospital, Varur, Karnataka</div>
-            <div style="margin-top:8px" class="small">Phone: +91-XXXXXXXXXX</div>
-            <div style="margin-top:8px" class="small">Email: clinic@yourdomain.com</div>
-            <div style="margin-top:8px" class="small">For appointments: Call or WhatsApp</div>
-            <div style="margin-top:12px">
-              <!-- Simple contact form using Formspree or similar. Replace action with your endpoint -->
-              <form id="contactForm" action="https://formspree.io/f/your-form-id" method="POST">
-                <div style="display:flex;gap:8px;flex-wrap:wrap">
-                  <input name="name" placeholder="Your name" required style="flex:1;padding:8px;border:1px solid #e6eef2;border-radius:8px" />
-                  <input name="phone" placeholder="Phone" required style="width:160px;padding:8px;border:1px solid #e6eef2;border-radius:8px" />
+    <!-- =================== HEADER =================== -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>Dr Kembhavi's Astanga Wellness Pvt Ltd</h1>
+                    <p>Holistic Healthcare & Traditional Wellness</p>
                 </div>
-                <textarea name="message" placeholder="Message / appointment request" required style="width:100%;margin-top:8px;padding:8px;border:1px solid #e6eef2;border-radius:8px;min-height:90px"></textarea>
-                <div style="margin-top:8px">
-                  <button class="btn" type="submit">Send</button>
-                </div>
-                <div class="small" style="margin-top:8px;color:var(--muted)">Replace the Formspree action with your own form endpoint (or use mailto:) to receive messages.</div>
-              </form>
+                <nav>
+                    <button class="mobile-menu" onclick="toggleMenu()">☰</button>
+                    <ul id="nav-menu">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#consultants">Consultants</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#information">Information</a></li>
+                        <li><a href="#payment">Payment</a></li>
+                    </ul>
+                </nav>
             </div>
-          </div>
         </div>
+    </header>
 
-        <div>
-          <div class="card">
-            <h3>Map</h3>
-            <div class="small" style="margin-top:8px">Open location in Google Maps:</div>
-            <div style="margin-top:8px"><a class="btn" href="https://www.google.com/maps" target="_blank">Open Maps</a></div>
-          </div>
+    <!-- =================== MAIN CONTENT =================== -->
+    <main>
+        <!-- HERO SECTION -->
+        <section id="home" class="hero">
+            <div class="container">
+                <h2>Welcome to Dr Kembhavi's Astanga Wellness</h2>
+                <p>Experience comprehensive healthcare combining modern medical expertise with traditional Astanga wellness practices for your complete well-being.</p>
+            </div>
+        </section>
+
+        <div class="container">
+            <!-- =================== CONSULTANTS SECTION =================== -->
+            <section id="consultants" class="section">
+                <h3 class="section-title">Our Expert Consultants</h3>
+                <div class="consultants-grid">
+                    <!-- CONSULTANT 1 - Replace with actual doctor details -->
+                    <div class="consultant-card">
+                        <div class="consultant-photo">
+                            Replace with Dr. Kembhavi's photo
+                        </div>
+                        <h4 class="consultant-name">Dr. Kembhavi</h4>
+                        <p class="consultant-specialty">Chief Medical Officer & Astanga Wellness Specialist</p>
+                        <p class="consultant-credentials">MBBS, MD, Certified Astanga Practitioner<br>25+ years experience</p>
+                    </div>
+
+                    <!-- CONSULTANT 2 - Add more consultants as needed -->
+                    <div class="consultant-card">
+                        <div class="consultant-photo">
+                            Replace with consultant photo
+                        </div>
+                        <h4 class="consultant-name">Dr. [Name]</h4>
+                        <p class="consultant-specialty">Ayurvedic Medicine Specialist</p>
+                        <p class="consultant-credentials">BAMS, MD (Ayurveda)<br>15+ years experience</p>
+                    </div>
+
+                    <!-- CONSULTANT 3 - Add more consultants as needed -->
+                    <div class="consultant-card">
+                        <div class="consultant-photo">
+                            Replace with consultant photo
+                        </div>
+                        <h4 class="consultant-name">Dr. [Name]</h4>
+                        <p class="consultant-specialty">Yoga Therapy & Wellness Coach</p>
+                        <p class="consultant-credentials">Certified Yoga Therapist<br>10+ years experience</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- =================== CREDENTIALS SECTION =================== -->
+            <section class="section">
+                <h3 class="section-title">Our Credentials & Certifications</h3>
+                <div class="services-grid">
+                    <div class="service-item">
+                        <h4>Medical Certifications</h4>
+                        <p>All our doctors are licensed medical practitioners with valid state medical council registrations and specialized training in their respective fields.</p>
+                    </div>
+                    <div class="service-item">
+                        <h4>Astanga Wellness Certification</h4>
+                        <p>Certified practitioners of traditional Astanga wellness methods, combining ancient wisdom with modern healthcare approaches.</p>
+                    </div>
+                    <div class="service-item">
+                        <h4>Continuing Education</h4>
+                        <p>Our team regularly attends medical conferences and wellness seminars to stay updated with the latest advancements in healthcare.</p>
+                    </div>
+                    <div class="service-item">
+                        <h4>Quality Assurance</h4>
+                        <p>We maintain high standards of patient care and follow all medical ethics and safety protocols as per medical council guidelines.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- =================== SERVICES SECTION =================== -->
+            <section id="services" class="section">
+                <h3 class="section-title">Our Services</h3>
+                <div class="services-grid">
+                    <!-- Modify these services according to your actual offerings -->
+                    <div class="service-item">
+                        <h4>General Medicine Consultation</h4>
+                        <p>Comprehensive health check-ups and treatment for common medical conditions with personalized care.</p>
+                    </div>
+                    <div class="service-item">
+                        <h4>Astanga Wellness Programs</h4>
+                        <p>Traditional Astanga-based wellness programs including yoga therapy, meditation, and lifestyle counseling.</p>
+                    </div>
+                    <div class="service-item">
+                        <h4>Preventive Healthcare</h4>
+                        <p>Health screening, vaccination, and preventive care programs to maintain optimal health.</p>
+                    </div>
+                    <div class="service-item">
+                        <h4>Ayurvedic Treatments</h4>
+                        <p>Traditional Ayurvedic therapies and herbal treatments for various health conditions.</p>
+                    </div>
+                    <div class="service-item">
+                        <h4>Nutritional Counseling</h4>
+                        <p>Personalized diet plans and nutritional guidance based on individual health needs and constitution.</p>
+                    </div>
+                    <div class="service-item">
+                        <h4>Stress Management</h4>
+                        <p>Holistic stress management techniques combining modern psychology with traditional wellness practices.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- =================== INFORMATION SECTION =================== -->
+            <section id="information" class="section">
+                <h3 class="section-title">Health Information & Guidelines</h3>
+                <div class="info-tabs">
+                    <div class="tab-buttons">
+                        <button class="tab-button active" onclick="showTab('diet')">Diet Guidelines</button>
+                        <button class="tab-button" onclick="showTab('lifestyle')">Lifestyle Tips</button>
+                        <button class="tab-button" onclick="showTab('wellness')">Wellness Practices</button>
+                        <button class="tab-button" onclick="showTab('prevention')">Prevention Tips</button>
+                    </div>
+
+                    <div id="diet" class="tab-content active">
+                        <h4>Healthy Diet Guidelines</h4>
+                        <ul>
+                            <li>Eat fresh, seasonal, and locally sourced foods whenever possible</li>
+                            <li>Include a variety of colorful fruits and vegetables in your daily meals</li>
+                            <li>Choose whole grains over processed foods</li>
+                            <li>Limit sugar, salt, and processed food intake</li>
+                            <li>Stay hydrated with adequate water intake (8-10 glasses daily)</li>
+                            <li>Practice mindful eating and avoid overeating</li>
+                            <li>Include healthy fats like nuts, seeds, and olive oil</li>
+                            <li>Maintain regular meal timings</li>
+                        </ul>
+                    </div>
+
+                    <div id="lifestyle" class="tab-content">
+                        <h4>Healthy Lifestyle Recommendations</h4>
+                        <ul>
+                            <li>Maintain a regular sleep schedule (7-8 hours per night)</li>
+                            <li>Exercise regularly for at least 30 minutes daily</li>
+                            <li>Practice stress management techniques like meditation or yoga</li>
+                            <li>Avoid smoking and limit alcohol consumption</li>
+                            <li>Take regular breaks from screens and electronic devices</li>
+                            <li>Spend time in nature and get adequate sunlight</li>
+                            <li>Maintain social connections and relationships</li>
+                            <li>Practice good hygiene and cleanliness</li>
+                        </ul>
+                    </div>
+
+                    <div id="wellness" class="tab-content">
+                        <h4>Astanga Wellness Practices</h4>
+                        <ul>
+                            <li>Start your day with gentle stretching or yoga poses</li>
+                            <li>Practice deep breathing exercises (Pranayama) daily</li>
+                            <li>Incorporate meditation into your routine</li>
+                            <li>Follow the principles of Ahimsa (non-violence) in thought and action</li>
+                            <li>Practice gratitude and positive thinking</li>
+                            <li>Maintain balance in all aspects of life</li>
+                            <li>Listen to your body's natural rhythms</li>
+                            <li>Seek harmony between mind, body, and spirit</li>
+                        </ul>
+                    </div>
+
+                    <div id="prevention" class="tab-content">
+                        <h4>Disease Prevention Tips</h4>
+                        <ul>
+                            <li>Get regular health check-ups and screenings</li>
+                            <li>Keep vaccinations up to date</li>
+                            <li>Practice good hand hygiene</li>
+                            <li>Maintain a healthy weight</li>
+                            <li>Monitor blood pressure and cholesterol levels</li>
+                            <li>Protect yourself from excessive sun exposure</li>
+                            <li>Stay informed about seasonal health concerns</li>
+                            <li>Seek early medical attention for persistent symptoms</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- =================== PAYMENT SECTION =================== -->
+            <section id="payment" class="section payment-section">
+                <h3 class="section-title">Easy Payment Options</h3>
+                <div class="payment-methods">
+                    <!-- GOOGLE BUSINESS QR CODE -->
+                    <div class="payment-method">
+                        <h4>📱 Google Business QR Code</h4>
+                        <div class="qr-placeholder">
+                            <!-- REPLACE THIS WITH YOUR ACTUAL GOOGLE BUSINESS QR CODE -->
+                            Replace this placeholder with your actual Google Business QR code image
+                        </div>
+                        <p>Scan the QR code with any UPI app to make payments directly to our business account.</p>
+                    </div>
+
+                    <!-- UPI PAYMENT -->
+                    <div class="payment-method">
+                        <h4>💳 UPI Payment</h4>
+                        <div class="upi-section">
+                            <p>Our UPI ID:</p>
+                            <!-- REPLACE WITH YOUR ACTUAL UPI ID -->
+                            <div class="upi-id" id="upi-id">drkemasthanga@paytm</div>
+                            <div class="payment-buttons">
+                                <button class="btn btn-success" onclick="copyUPIId()">📋 Copy UPI ID</button>
+                                <a href="#" class="btn" onclick="openUPIApp()" id="upi-link">💰 Pay Now via UPI</a>
+                                <button class="btn btn-secondary" onclick="shareUPIDetails()">📤 Share Payment Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PAYMENT INSTRUCTIONS -->
+                <div class="mt-2">
+                    <h4 style="color: #2e7d32; text-align: center; margin-bottom: 1rem;">Payment Instructions</h4>
+                    <div style="background: white; padding: 1.5rem; border-radius: 8px;">
+                        <ol style="margin-left: 1.5rem;">
+                            <li>Choose your preferred payment method above</li>
+                            <li>For QR code: Scan with any UPI app (PhonePe, Paytm, Google Pay, etc.)</li>
+                            <li>For UPI ID: Copy the ID and paste in your UPI app</li>
+                            <li>Enter the amount as advised by our consultant</li>
+                            <li>Complete the payment and save the transaction screenshot</li>
+                            <li>Share the payment confirmation with our clinic</li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
         </div>
+    </main>
 
-      </div>
-    </section>
+    <!-- =================== FOOTER =================== -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Contact Information</h4>
+                    <!-- UPDATE WITH YOUR ACTUAL CONTACT DETAILS -->
+                    <p>📍 [Your Clinic Address]</p>
+                    <p>📞 [Your Phone Number]</p>
+                    <p>📧 [Your Email Address]</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Working Hours</h4>
+                    <!-- UPDATE WITH YOUR ACTUAL WORKING HOURS -->
+                    <p>Monday - Saturday: 9:00 AM - 6:00 PM</p>
+                    <p>Sunday: 10:00 AM - 2:00 PM</p>
+                    <p>Emergency: 24/7 (Call ahead)</p>
+                </div>
+                <div class="footer-section">
+                    <h4>About Us</h4>
+                    <p>Dr Kembhavi's Astanga Wellness Pvt Ltd combines modern medical expertise with traditional Astanga wellness practices to provide comprehensive healthcare solutions.</p>
+                </div>
+            </div>
+            <div style="border-top: 1px solid rgba(255,255,255,0.2); padding-top: 1rem;">
+                <p>&copy; 2025 Dr Kembhavi's Astanga Wellness Pvt Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 
-  </main>
+    <!-- =================== JAVASCRIPT =================== -->
+    <script>
+        // =================== NAVIGATION FUNCTIONS ===================
+        function toggleMenu() {
+            const menu = document.getElementById('nav-menu');
+            menu.classList.toggle('show');
+        }
 
-  <footer>
-    <div class="container">
-      © <span id="year"></span> Jain AGM Ayurvedic Clinic — All rights reserved.
-    </div>
-  </footer>
+        // =================== TAB FUNCTIONALITY ===================
+        function showTab(tabName) {
+            // Hide all tab contents
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabContents.forEach(content => content.classList.remove('active'));
+            
+            // Remove active class from all buttons
+            const tabButtons = document.querySelectorAll('.tab-button');
+            tabButtons.forEach(button => button.classList.remove('active'));
+            
+            // Show selected tab content
+            document.getElementById(tabName).classList.add('active');
+            
+            // Add active class to clicked button
+            event.target.classList.add('active');
+        }
 
-  <!-- Modal for consultant details -->
-  <div id="modal" class="modal" onclick="closeModal(event)">
-    <div class="modal-card" role="dialog" aria-modal="true">
-      <div id="modalContent"></div>
-      <div style="margin-top:12px;text-align:right"><button class="btn" onclick="closeModal()">Close</button></div>
-    </div>
-  </div>
+        // =================== PAYMENT FUNCTIONS ===================
+        
+        // REPLACE 'drkemasthanga@paytm' WITH YOUR ACTUAL UPI ID
+        const UPI_ID = 'drkemasthanga@paytm';
+        const BUSINESS_NAME = 'Dr Kembhavi\'s Astanga Wellness Pvt Ltd';
 
-  <script>
-    // ====== Small interactive helpers (edit placeholders in this file) ======
-    document.getElementById('year').textContent = new Date().getFullYear();
+        function copyUPIId() {
+            const upiId = document.getElementById('upi-id').textContent;
+            navigator.clipboard.writeText(upiId).then(() => {
+                alert('UPI ID copied to clipboard!');
+            }).catch(() => {
+                // Fallback for older browsers
+                const textArea = document.createElement('textarea');
+                textArea.value = upiId;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+                alert('UPI ID copied to clipboard!');
+            });
+        }
 
-    function openConsultant(e, name, details){
-      if(e) e.preventDefault();
-      document.getElementById('modalContent').innerHTML = '<h3>'+name+'</h3><pre style="white-space:pre-wrap">'+details+'</pre>';
-      document.getElementById('modal').style.display = 'flex';
-    }
-    function closeModal(e){
-      if(e && e.target !== document.getElementById('modal')) return; // only close on backdrop
-      document.getElementById('modal').style.display = 'none';
-    }
+        function openUPIApp() {
+            // This creates a UPI deep link that opens UPI apps
+            // MODIFY THE AMOUNT AND DESCRIPTION AS NEEDED
+            const amount = ''; // Leave empty so user can enter amount
+            const description = 'Payment to Dr Kembhavi\'s Astanga Wellness';
+            
+            const upiUrl = `upi://pay?pa=${UPI_ID}&pn=${encodeURIComponent(BUSINESS_NAME)}&tn=${encodeURIComponent(description)}${amount ? '&am=' + amount : ''}`;
+            
+            // Try to open UPI app
+            window.location.href = upiUrl;
+            
+            // Fallback message
+            setTimeout(() => {
+                alert('If UPI app didn\'t open, please copy the UPI ID and paste it in your preferred UPI app.');
+            }, 2000);
+        }
 
-    function copyUPI(){
-      const upi = document.getElementById('upiId').value;
-      navigator.clipboard.writeText(upi).then(()=>{
-        alert('UPI ID copied to clipboard: '+upi);
-      }).catch(()=>{alert('Please copy manually: '+upi)});
-    }
+        function shareUPIDetails() {
+            const paymentDetails = `
+Payment Details for Dr Kembhavi's Astanga Wellness Pvt Ltd
 
-    function openUPI(ev){
-      if(ev) ev.preventDefault();
-      // Customize these values
-      const UPI_ID = document.getElementById('upiId').value; // replace the input value with your UPI ID
-      const amount = '';// optionally set a default amount e.g. '500'
-      const name = encodeURIComponent('Jain AGM Ayurvedic Clinic');
-      const note = encodeURIComponent('Consultation');
-      // UPI deep link (works on many mobile devices)
-      let uri = 'upi://pay?pa=' + encodeURIComponent(UPI_ID) + '&pn=' + name + '&tn=' + note;
-      if(amount) uri += '&am=' + amount;
-      // also construct a web intent fallback (some Android browsers support intent) - here we just try to open the uri
-      window.location.href = uri;
-    }
+UPI ID: ${UPI_ID}
+Business Name: ${BUSINESS_NAME}
 
-    function openImage(src){
-      // open full-size QR in new tab for easy scanning
-      window.open(src, '_blank');
-    }
+Instructions:
+1. Open any UPI app (PhonePe, Paytm, Google Pay, etc.)
+2. Choose "Pay to UPI ID" or "Pay to Phone Number"
+3. Enter the UPI ID: ${UPI_ID}
+4. Enter the amount as advised
+5. Complete the payment
+6. Share payment confirmation with the clinic
+            `.trim();
 
-    // Optional: intercept contact form submission to show a friendly message (works even with Formspree)
-    document.getElementById('contactForm').addEventListener('submit', function(e){
-      // let the form submit normally to your endpoint. Optionally you can add client-side validation here.
-      setTimeout(function(){alert('Thank you! Your message was sent. We will contact you soon.');},400);
-    });
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Payment Details - Dr Kembhavi\'s Astanga Wellness',
+                    text: paymentDetails
+                });
+            } else {
+                // Fallback: copy to clipboard
+                navigator.clipboard.writeText(paymentDetails).then(() => {
+                    alert('Payment details copied to clipboard! You can share this information.');
+                }).catch(() => {
+                    alert('Payment details:\n\n' + paymentDetails);
+                });
+            }
+        }
 
-    // Helpful console note for whoever edits the file
-    console.log('Edit this file: replace qr-placeholder.png, set the correct UPI ID in the input, update contact phone/email, and replace Formspree action. Then push to GitHub and enable Pages.');
-  </script>
+        // =================== SMOOTH SCROLLING ===================
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+                // Close mobile menu if open
+                document.getElementById('nav-menu').classList.remove('show');
+            });
+        });
+
+        // =================== INITIALIZATION ===================
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Dr Kembhavi\'s Astanga Wellness app loaded successfully!');
+            
+            // Update UPI link with actual UPI ID
+            const upiLink = document.getElementById('upi-link');
+            upiLink.onclick = openUPIApp;
+        });
+
+        /* 
+        =================== CUSTOMIZATION NOTES ===================
+        
+        TO CUSTOMIZE THIS APP FOR YOUR CLINIC:
+
+        1. REPLACE PLACEHOLDER IMAGES:
+           - Add your clinic hero image
+           - Add doctor photos in consultant cards
+           - Add your Google Business QR code image
+
+        2. UPDATE CONTACT INFORMATION:
+           - Replace [Your Clinic Address] with actual address
+           - Replace [Your Phone Number] with actual phone
+           - Replace [Your Email Address] with actual email
+
+        3. UPDATE PAYMENT DETAILS:
+           - Replace 'drkemasthanga@paytm' with your actual UPI ID
+           - Update Google Business QR code
+
+        4. MODIFY SERVICES:
+           - Update the services grid with your actual services
+           - Modify pricing if needed
+
+        5. UPDATE CONSULTANT DETAILS:
+           - Replace placeholder consultant information
+           - Add/remove consultant cards as needed
+
+        6. CUSTOMIZE CONTENT:
+           - Update working hours
+           - Modify health guidelines as per your practice
+           - Update about us section
+
+        7. BRANDING:
+           - Adjust colors in CSS if needed
+           - Add your logo if available
+
+        8. FUNCTIONALITY:
+           - Test all payment links
+           - Verify UPI ID functionality
+           - Test on mobile devices
+        */
+    </script>
 </body>
 </html>
