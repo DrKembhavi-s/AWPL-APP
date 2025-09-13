@@ -378,24 +378,33 @@
         }
         
         .service-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            color: #555;
             padding: 8px 0;
             border-bottom: 1px solid #e0e6ed;
+            line-height: 1.5;
         }
         
         .service-item:last-child {
             border-bottom: none;
         }
         
-        .service-name {
-            color: #555;
+        .pricing-note {
+            background: #e8f4f8;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #4a90e2;
+            margin-top: 20px;
+            text-align: center;
         }
         
-        .service-price {
-            color: #667eea;
-            font-weight: bold;
+        .pricing-note h4 {
+            color: #4a90e2;
+            margin-bottom: 10px;
+        }
+        
+        .pricing-note p {
+            color: #555;
+            margin: 0;
         }
         
         .specialties-grid {
@@ -863,112 +872,44 @@
 
         <!-- Services Section -->
         <div class="section">
-            <h2>🏥 Our Services & Pricing</h2>
+            <h2>🏥 Our Services</h2>
             
             <div class="services-grid">
                 <div class="service-category">
                     <h4>General Services</h4>
-                    <div class="service-item">
-                        <span class="service-name">One Time Registration Fee</span>
-                        <span class="service-price">₹100.00</span>
-                    </div>
-                    <div class="service-item">
-                        <span class="service-name">Consultation</span>
-                        <span class="service-price">₹300.00</span>
-                    </div>
-                    <div class="service-item">
-                        <span class="service-name">Follow-up Consultation (Within 30 Days)</span>
-                        <span class="service-price">₹150.00</span>
-                    </div>
+                    <div class="service-item">One Time Registration Fee</div>
+                    <div class="service-item">Consultation</div>
+                    <div class="service-item">Follow-up Consultation (Within 30 Days)</div>
                 </div>
 
                 <div class="service-category">
                     <h4>Panchakarma Treatments (Including Medicine)</h4>
-                    <div class="service-item">
-                        <span class="service-name">Vamana Karma</span>
-                        <span class="service-price">₹10,000.00</span>
-                    </div>
-                    <div class="service-item">
-                        <span class="service-name">Virechana Karma</span>
-                        <span class="service-price">₹8,500.00</span>
-                    </div>
-                    <div class="service-item">
-                        <span class="service-name">Basti Karma</span>
-                        <span class="service-price">₹8,000.00</span>
-                    </div>
-                    <div class="service-item">
-                        <span class="service-name">Nasya Karma</span>
-                        <span class="service-price">₹2,500.00</span>
-                    </div>
-                    <div class="service-item">
-                        <span class="service-name">Rakta Mokshana (Per Sitting)</span>
-                        <span class="service-price">₹750.00</span>
-                    </div>
+                    <div class="service-item">Vamana Karma</div>
+                    <div class="service-item">Virechana Karma</div>
+                    <div class="service-item">Basti Karma</div>
+                    <div class="service-item">Nasya Karma</div>
+                    <div class="service-item">Rakta Mokshana (Per Sitting)</div>
                 </div>
 
                 <div class="service-category">
                     <h4>Other Treatments (Exclusive of Medicine Cost)</h4>
-                    <div class="service-item">
-                        <span class="service-name">Sarvanga Abhyanga & Swedana / Day</span>
-                        <span class="service-price">₹750.00</span>
-                    </div>
-                    <div class="service-item">
-                        <span class="service-name">Sthanika Abhyanga & Nadi Sweda / Day</span>
-                        <span class="service-price">₹500.00</span>
-                    </div>
-                    <div class="service-item">
-                        <span class="service-name">Matra Basti / Day</span>
-                        <span class="service-price">₹300.00</span>
-                    </div>
-                    <div class="service-item">
-                        <span class="service-name">Kati Basti / Day</span>
-                        <span class="service-price">₹500.00</span>
-                    </div>
-                    <div class="service-item">
-                        <span class="service-name">Janu Basti / Day</span>
-                        <span class="service-price">₹500.00</span>
-                    </div>
-                    <div class="service-item">
-                        <span class="service-name">Shirodhara / Day</span>
-                        <span class="service-price">₹750.00</span>
-                    </div>
-                    <div class="service-item">
-                        <span class="service-name">Pinda Sweda / Day</span>
-                        <span class="service-price">₹500.00</span>
-                    </div>
-                    <div class="service-item">
-                        <span class="service-name">Shasthika Shali Pinda Sweda / Day</span>
-                        <span class="service-price">₹750.00</span>
-                    </div>
-                    <div class="service-item">
-                        <span class="service-name">Parisheka / Day</span>
-                        <span class="service-price">₹400.00</span>
-                    </div>
-                    <div class="service-item">
-                        <span class="service-name">Netra Tarpana / Day</span>
-                        <span class="service-price">₹250.00</span>
-                    </div>
-                    <div class="service-item">
-                        <span class="service-name">Agni Karma / Day</span>
-                        <span class="service-price">₹400.00</span>
-                    </div>
+                    <div class="service-item">Sarvanga Abhyanga & Swedana / Day</div>
+                    <div class="service-item">Sthanika Abhyanga & Nadi Sweda / Day</div>
+                    <div class="service-item">Matra Basti / Day</div>
+                    <div class="service-item">Kati Basti / Day</div>
+                    <div class="service-item">Janu Basti / Day</div>
+                    <div class="service-item">Shirodhara / Day</div>
+                    <div class="service-item">Pinda Sweda / Day</div>
+                    <div class="service-item">Shasthika Shali Pinda Sweda / Day</div>
+                    <div class="service-item">Parisheka / Day</div>
+                    <div class="service-item">Netra Tarpana / Day</div>
+                    <div class="service-item">Agni Karma / Day</div>
                 </div>
-
-                <div class="service-category">
-                    <h4>Special Offers</h4>
-                    <div class="service-item">
-                        <span class="service-name">Senior Citizens</span>
-                        <span class="service-price">20% Discount</span>
-                    </div>
-                    <div class="service-item">
-                        <span class="service-name">Ex-Service / Defence Personnel</span>
-                        <span class="service-price">20% Discount</span>
-                    </div>
-                    <div class="service-item">
-                        <span class="service-name">BPL Card Holders</span>
-                        <span class="service-price">15% Discount</span>
-                    </div>
-                </div>
+            </div>
+            
+            <div class="pricing-note">
+                <h4>💰 Treatment Pricing</h4>
+                <p>For detailed pricing information and personalized treatment packages, please contact us via WhatsApp or during your consultation. Our costs are transparent and affordable compared to spa-based Ayurveda treatments.</p>
             </div>
         </div>
 
