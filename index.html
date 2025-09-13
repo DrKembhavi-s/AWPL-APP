@@ -287,6 +287,76 @@
             margin-top: 8px;
         }
         
+        .learn-more-btn {
+            background: #667eea;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            margin-top: 15px;
+            font-size: 0.9em;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .learn-more-btn:hover {
+            background: #5a67d8;
+            transform: translateY(-1px);
+        }
+        
+        .cv-section {
+            margin-top: 20px;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid #e0e6ed;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+        
+        .cv-section h4 {
+            color: #667eea;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .cv-section h4:first-child {
+            margin-top: 0;
+        }
+        
+        .cv-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .cv-list li {
+            color: #555;
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+            line-height: 1.5;
+        }
+        
+        .cv-list li:before {
+            content: "•";
+            color: #667eea;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        .cv-section p {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -706,6 +776,41 @@
                 <div class="credentials">M.D. (Ayu-Shalya), PGDMLS, M.S. (Counseling & Psychotherapy)</div>
                 <div class="specialization">Consulting Ayurveda Surgeon and Counselor</div>
                 <div class="phone">📞 98867 59499</div>
+                <button class="learn-more-btn" onclick="toggleCV('aakash-cv')">Learn More About Dr. Aakash</button>
+                
+                <div id="aakash-cv" class="cv-section" style="display: none;">
+                    <h4>Educational Qualifications:</h4>
+                    <ul class="cv-list">
+                        <li><strong>BAMS - 1994</strong> - Karnataka University, Dharwad (Double Gold Medalist and University Topper for All Years)</li>
+                        <li><strong>MD - 1998</strong> - IPGTR&A, Gujarat Ayurveda University, Jamnagar</li>
+                        <li><strong>PGDMLS</strong> - Symbiosis University, Pune</li>
+                        <li><strong>MS Counseling and Psychotherapy</strong> - Kuvempu University, Shivamogga (7th Rank)</li>
+                        <li>Completed 4 Certificate Courses on Covid-19</li>
+                    </ul>
+                    
+                    <h4>Clinical Expertise:</h4>
+                    <p>25+ years of clinical experience in the management of Piles, Fistula-in-Ano, Varicose veins, Diabetic Foot, Arterial Ulcers, Urinary Tract Diseases, Prostate disorders and Cancers.</p>
+                    
+                    <h4>Academic Excellence:</h4>
+                    <ul class="cv-list">
+                        <li>Visiting Professor at Thames Valley University, London</li>
+                        <li>Teaching at MAYUR, the Ayurvedic University of Europe, London</li>
+                        <li>Board Member of Europe Ayurveda Academy, France</li>
+                        <li>Editorial Board Member of multiple international journals</li>
+                        <li>RGUHS recognized PG and PhD Guide & Examiner</li>
+                        <li>Member, Research Board of Ayurveda Council for Research, USA</li>
+                    </ul>
+                    
+                    <h4>Publications & Research:</h4>
+                    <p>Published 15+ papers in national and international journals. Invited as Resource Person at State, National and International Seminars, Conferences and Workshops.</p>
+                    
+                    <h4>Current Positions:</h4>
+                    <ul class="cv-list">
+                        <li>Director & Consultant Surgeon at Astanga Wellness Pvt Ltd</li>
+                        <li>Principal, Professor and HOD of Shalya Tantra at Jain AGM Ayurvedic Medical College</li>
+                        <li>Subject Associate Editor at ARMARC Journal of Ayurveda</li>
+                    </ul>
+                </div>
             </div>
             
             <div class="consultant">
@@ -713,6 +818,46 @@
                 <div class="credentials">M.D. (Ayu-Kaya Chikitsa), D.Y.S., D.Nat-Yoga (Ayu), D.Ac., M.A. (Psychology in Child Mental Health), YIC, MSc Yoga</div>
                 <div class="specialization">Consulting Ayurveda, Yoga, Naturopathy, Acupuncture Physician, Panchakarma Specialist and Counselor</div>
                 <div class="phone">📞 98867 59399</div>
+                <button class="learn-more-btn" onclick="toggleCV('anita-cv')">Learn More About Dr. Anita</button>
+                
+                <div id="anita-cv" class="cv-section" style="display: none;">
+                    <h4>Educational Qualifications:</h4>
+                    <ul class="cv-list">
+                        <li><strong>BAMS - 1992</strong> - Karnataka University, Dharwad</li>
+                        <li><strong>DYS - 1996</strong> - Department of Yoga Studies, Karnataka University, Dharwad</li>
+                        <li><strong>D.Nat-Yoga (Ayu) - 1998</strong> - Gujarat Ayurveda University, Jamnagar</li>
+                        <li><strong>D.Ac - 2001</strong> - Diploma in Acupuncture</li>
+                        <li><strong>MD - Kayachikitsa - 2007</strong> - Rajiv Gandhi University of Health Sciences, Bengaluru</li>
+                        <li><strong>MA Child Psychology - 2014</strong> - Kuvempu University, Shivamogga</li>
+                        <li><strong>MSc Yoga - 2019</strong> - SVYASA University, Bengaluru</li>
+                    </ul>
+                    
+                    <h4>Clinical Specializations:</h4>
+                    <p>Expert in management of Diabetes, Rheumatoid and Osteoarthritis, Osteoporosis, Obesity, Respiratory diseases, Allergies, Skin diseases, PCOS, and Women & Child health issues.</p>
+                    
+                    <h4>Professional Affiliations:</h4>
+                    <ul class="cv-list">
+                        <li>Board Member of Europe Ayurveda Academy, France</li>
+                        <li>Chairperson of Scientific Session at International Congress (SDM College of Ayurveda, Udupi)</li>
+                        <li>Secretary of Smt Nagammatai Mahila Mandal</li>
+                        <li>Life Member of Red Cross Society and Hemophilia Society</li>
+                        <li>Member of Gandhi Peace Foundation, Dharwad</li>
+                        <li>Guest Teaching Faculty for Women Warder Trainees (Police Training)</li>
+                    </ul>
+                    
+                    <h4>Areas of Interest:</h4>
+                    <p>Ayurveda, Yoga, Nature, Waste Management, Eco-friendly Living, Organic Agriculture, Women and Child Welfare</p>
+                    
+                    <h4>Current Positions:</h4>
+                    <ul class="cv-list">
+                        <li>Director & Consultant Physician at Astanga Wellness Pvt Ltd</li>
+                        <li>Medical Superintendent, Professor and HOD of Kayachikitsa at Jain AGM Ayurvedic Medical College</li>
+                        <li>Practicing Authentic Ayurveda, Yoga, Naturopathy and Acupuncture since 1999</li>
+                    </ul>
+                    
+                    <h4>Publications:</h4>
+                    <p>Published 3 papers in International journals and invited as Resource Person at various State, National and International Seminars, Conferences and Workshops.</p>
+                </div>
             </div>
         </div>
 
@@ -1094,6 +1239,32 @@
             element.classList.toggle('active');
             answer.classList.toggle('active');
             icon.textContent = icon.textContent === '+' ? '−' : '+';
+        }
+
+        // CV Toggle Functionality
+        function toggleCV(cvId) {
+            const cvSection = document.getElementById(cvId);
+            const allButtons = document.querySelectorAll('.learn-more-btn');
+            let targetButton = null;
+            
+            // Find the correct button based on the CV ID
+            allButtons.forEach(btn => {
+                if (btn.getAttribute('onclick').includes(cvId)) {
+                    targetButton = btn;
+                }
+            });
+            
+            if (cvSection.style.display === 'none' || cvSection.style.display === '') {
+                cvSection.style.display = 'block';
+                if (targetButton) {
+                    targetButton.textContent = targetButton.textContent.replace('Learn More About', 'Hide Details for');
+                }
+            } else {
+                cvSection.style.display = 'none';
+                if (targetButton) {
+                    targetButton.textContent = targetButton.textContent.replace('Hide Details for', 'Learn More About');
+                }
+            }
         }
 
         // Appointment Booking Function
